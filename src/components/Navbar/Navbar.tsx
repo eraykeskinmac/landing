@@ -17,7 +17,7 @@ const Navbar = () => {
       </div>
 
       <div className="lg:flex hidden gap-x-5 flex-row justify-center items-center ">
-        <p className="font-Inter font-normal text-xl text-white">Home</p>
+        <p className="font-Inter font-normal text-xl text-white">About</p>
         <p className="font-Inter font-normal text-xl text-white">Integration</p>
         <p className="font-Inter font-normal text-xl text-white">Blog</p>
         <p className="font-Inter font-normal text-xl text-white">Changelog</p>
