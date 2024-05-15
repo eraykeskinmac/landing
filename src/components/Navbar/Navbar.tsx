@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "../UI/moving-border";
+import { Button } from "../ui/moving-border";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
