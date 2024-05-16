@@ -19,7 +19,12 @@ export default function Brand() {
           <h1>From brainstorming to final designs,</h1>
           <h1>our focus is on creating experiences</h1>
         </div>
-        <Button className="z-10">Join waitlist</Button>
+        <Button
+          className="z-10"
+          onClick={() => document.getElementById("waitlist-form")?.focus()}
+        >
+          Join waitlist
+        </Button>
       </div>
     </section>
   );
