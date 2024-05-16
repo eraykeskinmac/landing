@@ -9,6 +9,7 @@ export const siteConfig: SiteConfig = {
   ogImage: "https://www.leapflow.tech/og.png",
   links: {
     twitter: "https://twitter.com/leapflowhq",
-    linkedin: "https://www.linkedin.com/company/leapflowhq"
+    linkedin: "https://www.linkedin.com/company/leapflowhq",
+    discord: "https://discord.gg/cCuKGNtr"
   }
 }
