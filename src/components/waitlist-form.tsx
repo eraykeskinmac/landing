@@ -31,10 +31,7 @@ export default function WaitlistForm() {
   };
 
   return (
-    <div
-      id="waitlist-form"
-      className="px-2 lg:px-0 w-full flex justify-center items-center z-20"
-    >
+    <div className="px-2 lg:px-0 w-full flex justify-center items-center z-20">
       <HeroInput
         placeholders={placeholders}
         onChange={(event) => {
@@ -42,6 +39,7 @@ export default function WaitlistForm() {
         }}
         onSubmit={(e) => handleSubmit(e)}
         type="email"
+        id="waitlist-form"
       />
       <div className="absolute top-20 left-1/2 -translate-x-1/2">
         {success && <ConfettiExplosion width={width} height={height} duration={3000} particleCount={200} />}
