@@ -4,7 +4,7 @@ export default function Brand() {
   return (
     <section className="w-full aspect-[1923/815] flex justify-center items-center my-8">
       <div className="relative w-full lg:w-[80%] mx-auto rounded-2xl border border-[#4048c04c] border-b-0 flex flex-col gap-5 pt-10 items-center pb-16 md:pb-24 lg:pb-36">
-        <h1 className="text-center absolute w-full font-bold tracking-wider -bottom-1 lg:-bottom-4 text-5xl md:text-7xl lg:text-9xl uppercase text-muted-foreground overflow-hidden -z-10 opacity-70">
+        <h1 className="text-center absolute w-full font-bold tracking-wider -bottom-1 lg:-bottom-5 text-5xl md:text-7xl lg:text-9xl uppercase text-muted-foreground overflow-hidden -z-10 opacity-70">
           LEAPFLOW
         </h1>
         <Gradient />
