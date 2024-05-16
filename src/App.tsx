@@ -1,15 +1,17 @@
-import React from 'react'
-import './App.css'
-import Hero from './components/Hero/Hero'
+import Hero from "@/components/hero";
+import FeaturesSection from "@/components/features";
+import Brand from "@/components/brand";
 
 function App() {
-
-
   return (
-    <div className='flex justify-center items-center mx-auto max-w-7xl flex-col z-40'>
-  <Hero/>
+    <div className="flex flex-col justify-center items-center w-full">
+      <div className="w-full bg-[var(--bg-hero)] mb-12 lg:mb-[20vh]">
+        <Hero />
+      </div>
+      <FeaturesSection />
+      <Brand />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
