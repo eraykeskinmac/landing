@@ -1,25 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "@/App.tsx";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
 import "@/styles/globals.css";
-import { Navbar } from "@/components/navbar";
-import Footer from "@/components/footer";
-import RootProvider from "@/components/root-provider";
-import { Toaster } from "@/components/ui/sonner";
-import Mininav from "@/components/navbar/mininav";
+
+const router = createRouter({ routeTree });
+
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RootProvider>
-      <Toaster richColors position="top-center" toastOptions={{}} />
-      <Mininav />
-      <header className="bg-[var(--bg-hero)] w-full">
-        <Navbar />
-      </header>
-      <App />
-      <footer className="border-t">
-        <Footer />
-      </footer>
-    </RootProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
