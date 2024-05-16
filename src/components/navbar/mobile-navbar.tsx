@@ -3,6 +3,7 @@ import { Icons } from "@/components/icons";
 import { Separator } from "@/components/ui/separator";
 import { defaultNavConfig } from "@/config/navbar.config";
 import { cn } from "@/lib/utils";
+import { Link } from "@tanstack/react-router";
 
 const variants = {
   visible: { x: 0, transition: { stiffness: 200 } },
@@ -27,8 +28,8 @@ export default function MobileNav() {
       <div className="flex bg-transparent gap-x-5 flex-col gap-y-4 justify-start items-start  ">
         {defaultNavConfig.map((item) => {
           return (
-            <a
-              href={item.href}
+            <Link
+              to={item.href}
               key={item.href}
               className={cn(
                 "hover:text-primary duration-75 transition-colors",
@@ -37,7 +38,7 @@ export default function MobileNav() {
               aria-disabled={item.disable}
             >
               {item.title}
-            </a>
+            </Link>
           );
         })}
       </div>
