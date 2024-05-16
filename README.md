@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# Leapflow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Your AI Agent to supercharge workflow
 
-Currently, two official plugins are available:
+## Project structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+src
+├── components
+│   └── ui
+├── config
+├── lib
+│   ├── hooks
+│   ├── utils
+├── styles
+│   └── globals.css
+├── types
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started
+
+- supports both npm and bun
+
+```bash
+npm install
+```
+
+or
+  
+```bash
+bun install
+```
+
+## Running the app
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+bun dev
+```
+
+### Todo
+
+- [x] shadcn init
+- [x] complete base layout
+- [ ] light theme support
+- [ ] feature bento grid components
+- [ ] fix few layout issues
+- [ ] add waitlist functionality
