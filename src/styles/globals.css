@@ -36,11 +36,11 @@
     --radius: 0.5rem;
 
     --shine-degree: 120deg;
-    --shine-color: rgba(161, 8, 212, 0.599);
+    --shine-color: rgba(116, 55, 186, 0.3);
     --shine-effect: linear-gradient(
       var(--shine-degree),
       transparent,
-      hsl(var(--primary)),
+      var(--shine-color),
       transparent
     );
     --shine-transition: all 0.45s ease-in-out;
@@ -83,11 +83,22 @@
   * {
     @apply border-border;
     font-family: "DM Sans", sans-serif;
+    box-sizing: border-box
   }
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
   }
+}
+
+.nav-gradient {
+  background-image: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    var(--violet-700) 250%
+  );
+  background-size: 100% 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .shine {
@@ -133,6 +144,17 @@
     left: 100%;
     transition-property: left;
   }
+}
+
+/* circular gradient */
+.radial-gradient {
+  background-image: radial-gradient(
+    circle,
+    var(--violet-700) 5%,
+    var(--violet-800) 10%,
+    transparent 70%
+  );
+  filter: blur(5px)
 }
 
 /* tailwind styles */
