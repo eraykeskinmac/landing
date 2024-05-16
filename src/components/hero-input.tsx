@@ -191,6 +191,7 @@ export function HeroInput({
           animating && "text-transparent dark:text-transparent"
         )}
         id={id}
+        autoComplete="off"
       />
 
       <button
