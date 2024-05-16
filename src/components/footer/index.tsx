@@ -2,15 +2,16 @@ import { Separator } from "@/components/ui/separator";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site.config";
+import { Link } from "@tanstack/react-router";
 
 export default function Footer() {
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col py-4 lg:py-16 px-2 md:px-3 lg:px-0">
       <div className="flex justify-between">
         <div className="space-y-5">
-          <a href="/">
+          <Link to="/">
             <Icons.Logo />
-          </a>
+          </Link>
           <div className="flex items-center gap-3">
             <Button
               size="sm"
@@ -26,53 +27,53 @@ export default function Footer() {
             </Button>
           </div>
           <div className="flex items-center gap-3">
-            <a href={siteConfig.links.twitter} target="_blank">
+            <Link to={siteConfig.links.twitter} target="_blank">
               <Icons.Twitter className="hover:scale-110 duration-75 transition-all ease-in-out" />
-            </a>
-            <a href={siteConfig.links.linkedin} target="_blank">
+            </Link>
+            <Link to={siteConfig.links.linkedin} target="_blank">
               <Icons.LinkedIn className="hover:scale-110 duration-75 transition-all ease-in-out" />
-            </a>
-            <a href={siteConfig.links.discord} target="_blank" className="rounded-full w-7 h-7 p-1 bg-white flex justify-center items-center hover:scale-110 duration-75 transition-all ease-in-out">
+            </Link>
+            <Link to={siteConfig.links.discord} target="_blank" className="rounded-full w-7 h-7 p-1 bg-white flex justify-center items-center hover:scale-110 duration-75 transition-all ease-in-out">
               <Icons.Discord width={20} height={20} />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex gap-12">
           <div className="space-y-3 text-muted-foreground flex flex-col">
             <h1 className="text-primary">Products</h1>
-            <a
-              href="/docs"
+            <Link
+              to="/docs"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
             >
               Docs
-            </a>
-            <a
-              href="/changelog"
+            </Link>
+            <Link
+              to="/changelog"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
             >
               Changelog
-            </a>
+            </Link>
           </div>
           <div className="space-y-3 text-muted-foreground flex flex-col">
             <h1 className="text-primary">Company</h1>
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
             >
               About
-            </a>
-            <a
-              href="/blogs"
+            </Link>
+            <Link
+              to="/blogs"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
             >
               Blogs
-            </a>
-            <a
-              href="/integration"
+            </Link>
+            <Link
+              to="/integration"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
             >
               Integration
-            </a>
+            </Link>
           </div>
         </div>
       </div>
