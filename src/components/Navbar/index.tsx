@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { MovingBorderButton } from "@/components/ui/moving-border";
 import { AnimatePresence, motion } from "framer-motion";
 import { Icons } from "@/components/icons";
 import MobileNav from "./mobile-navbar";
