@@ -37,6 +37,9 @@ export const Navbar = () => {
       <div className="flex justify-center items-center gap-x-4">
         <MovingBorderButton
           borderRadius="2rem"
+          onClick={() => {
+            document.getElementById("waitlist-form")?.focus();
+          }}
         >
           Join Waitlist
         </MovingBorderButton>

@@ -12,7 +12,14 @@ export default function Footer() {
             <Icons.Logo />
           </a>
           <div className="flex items-center gap-3">
-            <Button size="sm">Join waitlist</Button>
+            <Button
+              size="sm"
+              onClick={() => {
+                document.getElementById("waitlist-form")?.focus();
+              }}
+            >
+              Join waitlist
+            </Button>
             <Button variant="outline" size="sm">
               Learn more
             </Button>
@@ -29,14 +36,39 @@ export default function Footer() {
         <div className="flex gap-12">
           <div className="space-y-3 text-muted-foreground flex flex-col">
             <h1 className="text-primary">Products</h1>
-            <a href="/docs" className="text-sm hover:text-secondary-foreground duration-75 transition-colors">Docs</a>
-            <a href="/changelog" className="text-sm hover:text-secondary-foreground duration-75 transition-colors">Changelog</a>
+            <a
+              href="/docs"
+              className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
+            >
+              Docs
+            </a>
+            <a
+              href="/changelog"
+              className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
+            >
+              Changelog
+            </a>
           </div>
           <div className="space-y-3 text-muted-foreground flex flex-col">
             <h1 className="text-primary">Company</h1>
-            <a href="/about" className="text-sm hover:text-secondary-foreground duration-75 transition-colors">About</a>
-            <a href="/blogs" className="text-sm hover:text-secondary-foreground duration-75 transition-colors">Blogs</a>
-            <a href="/integration" className="text-sm hover:text-secondary-foreground duration-75 transition-colors">Integration</a>
+            <a
+              href="/about"
+              className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
+            >
+              About
+            </a>
+            <a
+              href="/blogs"
+              className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
+            >
+              Blogs
+            </a>
+            <a
+              href="/integration"
+              className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
+            >
+              Integration
+            </a>
           </div>
         </div>
       </div>
