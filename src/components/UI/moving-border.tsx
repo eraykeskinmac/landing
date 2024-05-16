@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   motion,
@@ -8,9 +7,9 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
-import { cn } from "../utils/cn";
+import { cn } from "@/lib/utils";
 
-export function Button({
+export function MovingBorderButton({
   borderRadius = "1.75rem",
   children,
   as: Component = "button",
@@ -32,7 +31,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "bg-transparent relative lg:h-14 h-10 lg:px-0  w-32 lg:w-40 p-[1px] overflow-hidden ",
+        "bg-transparent relative text-xl h-12 w-36 p-[1px] overflow-hidden hover:scale-105 duration-200 transition-transform transform-gpu ease-in-out",
         containerClassName
       )}
       style={{
@@ -47,7 +46,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--gray-400)_70%,transparent_60%)]",
+              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--violet-800)_40%,transparent_60%)]",
               borderClassName
             )}
           />
@@ -56,7 +55,7 @@ export function Button({
 
       <div
         className={cn(
-          "relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
+          "relative bg-[#1F1F1F] border border-[#3B3B3B] backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
           className
         )}
         style={{
@@ -71,7 +70,7 @@ export function Button({
 
 export const MovingBorder = ({
   children,
-  duration = 4000,
+  duration = 2000,
   rx,
   ry,
   ...otherProps
