@@ -2,6 +2,7 @@ import { defaultNavConfig } from "@/config/navbar.config";
 import { cn } from "@/lib/utils";
 import { useRef } from "react";
 import useScrolledEnough from "@/lib/hooks/useScrolledEnough";
+import { Link } from "@tanstack/react-router";
 
 export default function Mininav() {
   const pathName = window.location.pathname;
@@ -20,8 +21,8 @@ export default function Mininav() {
     >
       {defaultNavConfig.map((item) => {
         return (
-          <a
-            href={item.href}
+          <Link
+            to={item.href}
             key={item.href}
             className={cn(
               "hover:text-primary duration-75 transition-colors",
@@ -30,7 +31,7 @@ export default function Mininav() {
             aria-disabled={item.disable}
           >
             {item.title}
-          </a>
+          </Link>
         );
       })}
       <JoinWaitlistButton />

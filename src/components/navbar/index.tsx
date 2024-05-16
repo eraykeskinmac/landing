@@ -4,7 +4,8 @@ import { Icons } from "@/components/icons";
 import MobileNav from "./mobile-navbar";
 import { defaultNavConfig } from "@/config/navbar.config";
 import { cn } from "@/lib/utils";
-import { HoverBorderGradient } from "../ui/gradient-button";
+import { HoverBorderGradient } from "@/components/ui/gradient-button";
+import { Link } from "@tanstack/react-router";
 
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -72,8 +73,8 @@ const Links = () => {
     <div className="lg:flex hidden text-sm gap-x-5 justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       {defaultNavConfig.map((item) => {
         return (
-          <a
-            href={item.href}
+          <Link
+            to={item.href}
             key={item.href}
             className={cn(
               "hover:text-primary duration-75 transition-colors",
@@ -82,7 +83,7 @@ const Links = () => {
             aria-disabled={item.disable}
           >
             {item.title}
-          </a>
+          </Link>
         );
       })}
     </div>
