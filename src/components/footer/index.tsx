@@ -31,6 +31,9 @@ export default function Footer() {
             <a href={siteConfig.links.linkedin} target="_blank">
               <Icons.LinkedIn className="hover:scale-110 duration-75 transition-all ease-in-out" />
             </a>
+            <a href={siteConfig.links.discord} target="_blank" className="rounded-full w-7 h-7 p-1 bg-white flex justify-center items-center hover:scale-110 duration-75 transition-all ease-in-out">
+              <Icons.Discord width={20} height={20} />
+            </a>
           </div>
         </div>
         <div className="flex gap-12">
@@ -74,11 +77,11 @@ export default function Footer() {
       </div>
       <Separator className="my-5" />
       <div className="flex md:justify-between flex-wrap justify-center text-sm text-muted-foreground">
-        <p>© 2024 Leapflow. All rights reserved.</p>
+        <p>© 2024 <a href={siteConfig.siteUrl} className="hover:underline">Leapflow</a>. All rights reserved.</p>
         <div className="flex items-center gap-5">
-          <a>Terms of Service</a>
-          <a>Privacy Policy</a>
-          <a>Cookies</a>
+          <a href="/">Terms of Service</a>
+          <a href="/">Privacy Policy</a>
+          <a href="/">Cookies</a>
         </div>
       </div>
     </div>
