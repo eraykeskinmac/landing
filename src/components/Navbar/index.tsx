@@ -2,47 +2,28 @@ import { useState } from "react";
 import { MovingBorderButton } from "@/components/ui/moving-border";
 import { AnimatePresence, motion } from "framer-motion";
 import { Icons } from "@/components/icons";
+import MobileNav from "./mobile-navbar";
 import { defaultNavConfig } from "@/config/navbar.config";
 import { cn } from "@/lib/utils";
-import MobileNav from "./mobile-navbar";
+import { HoverBorderGradient } from "../ui/gradient-button";
 
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
-  const pathName = window.location.pathname;
 
   return (
     <div className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-0 px-6">
       <a href="/">
         <Icons.Logo />
       </a>
-
-      <div className="lg:flex hidden gap-x-5 flex-row justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        {defaultNavConfig.map((item) => {
-          return (
-            <a
-              href={item.href}
-              key={item.href}
-              className={cn(
-                "hover:text-primary duration-75 transition-colors",
-                pathName !== item.href && "text-muted-foreground"
-              )}
-              aria-disabled={item.disable}
-            >
-              {item.title}
-            </a>
-          );
-        })}
-      </div>
-
+      <Links />
       <div className="flex justify-center items-center gap-x-4">
-        <MovingBorderButton
-          borderRadius="2rem"
+        <HoverBorderGradient
           onClick={() => {
             document.getElementById("waitlist-form")?.focus();
           }}
         >
-          Join Waitlist
-        </MovingBorderButton>
+          Join waitlist
+        </HoverBorderGradient>
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -80,9 +61,31 @@ export const Navbar = () => {
           )}
         </motion.div>
       </div>
-      <AnimatePresence>
-        {showNavbar && <MobileNav />}
-      </AnimatePresence>
+      <AnimatePresence>{showNavbar && <MobileNav />}</AnimatePresence>
+    </div>
+  );
+};
+
+const Links = () => {
+  const pathName = window.location.pathname;
+
+  return (
+    <div className="lg:flex hidden text-sm gap-x-5 justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      {defaultNavConfig.map((item) => {
+        return (
+          <a
+            href={item.href}
+            key={item.href}
+            className={cn(
+              "hover:text-primary duration-75 transition-colors",
+              pathName !== item.href && "text-muted-foreground"
+            )}
+            aria-disabled={item.disable}
+          >
+            {item.title}
+          </a>
+        );
+      })}
     </div>
   );
 };
