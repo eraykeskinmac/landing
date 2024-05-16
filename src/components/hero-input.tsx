@@ -7,11 +7,13 @@ export function HeroInput({
   onChange,
   onSubmit,
   type = "text",
+  id = "hero-input",
 }: {
   placeholders: string[];
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   type?: "text" | "email" | "password" | "number" | "tel" | "url" | "search";
+  id?: string;
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
 
@@ -188,6 +190,7 @@ export function HeroInput({
           "w-full relative text-sm sm:text-base z-50 border-none bg-transparent h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
           animating && "text-transparent dark:text-transparent"
         )}
+        id={id}
       />
 
       <button
