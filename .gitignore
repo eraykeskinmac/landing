@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# locks
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
