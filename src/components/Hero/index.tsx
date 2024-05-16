@@ -1,26 +1,32 @@
-import { HeroInput } from "@/components/hero-input";
 import AnnouncementBar from "./announcement-bar";
 import { motion } from 'framer-motion'
 import { useRef, useState, useEffect } from "react";
+import WaitlistForm from "@/components/waitlist-form";
 
 export default function Hero() {
   const imageRef = useRef<HTMLImageElement>(null);
   const [imageHeight, setImageHeight] = useState(0);
 
   useEffect(() => {
-    if (imageRef.current) {
-      setImageHeight(imageRef.current.clientHeight);
+    const currentImageRef = imageRef.current;
 
-      const handleResize = () => {
-        setImageHeight(imageRef.current!.clientHeight);
-      };
+    const handleResize = () => {
+      if (currentImageRef) {
+        setImageHeight(currentImageRef.clientHeight);
+      }
+    };
+    handleResize();
 
-      window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
+    currentImageRef?.addEventListener("load", handleResize);
 
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
+    return () => {
+      window.removeEventListener("resize", handleResize);
+
+      if (currentImageRef) {
+        currentImageRef.removeEventListener("load", handleResize);
+      }
+    };
   }, [imageRef]);
 
   return (
@@ -40,13 +46,7 @@ export default function Hero() {
           workflows and repetitive tasks for you.
         </p>
       </div>
-      <div className="px-2 lg:px-0 w-full flex justify-center items-center z-20">
-        <HeroInput
-          placeholders={placeholders}
-          onChange={() => {}}
-          onSubmit={() => {}}
-        />
-      </div>
+      <WaitlistForm />
       <div className="relative w-full h-12">
         <img
           ref={imageRef}
@@ -61,11 +61,3 @@ export default function Hero() {
     </motion.div>
   );
 }
-
-const placeholders = [
-  "Schedule a meeting",
-  "Create a task",
-  "Create a document",
-  "Create a presentation",
-  "Create a spreadsheet",
-];
