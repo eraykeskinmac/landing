@@ -8,6 +8,7 @@ export type SiteConfig = {
   links: {
     twitter: string;
     linkedin: string;
+    discord: string;
   };
 }
 
