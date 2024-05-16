@@ -15,9 +15,9 @@ export default function Brand() {
           <div className="w-2 h-2 bg-secondary rotate-45"></div>
           <p className="uppercase">AI Automation</p>
         </div>
-        <div className="text-lg md:text-3xl">
-          <h1>From brainstorming to final designs,</h1>
-          <h1>our focus is on creating experiences</h1>
+        <div className="text-lg md:text-3xl text-center">
+          <h1>Increase your efficiency with ease,</h1>
+          <h1>and transform your workflow.</h1>
         </div>
         <Button
           className="z-10"
