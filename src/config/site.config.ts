@@ -10,6 +10,6 @@ export const siteConfig: SiteConfig = {
   links: {
     twitter: "https://twitter.com/leapflowhq",
     linkedin: "https://www.linkedin.com/company/leapflowhq",
-    discord: "https://discord.gg/cCuKGNtr"
+    discord: "https://discord.gg/yZQsvBKvGg"
   }
 }
