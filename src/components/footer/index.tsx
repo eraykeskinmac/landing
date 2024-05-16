@@ -17,6 +17,7 @@ export default function Footer() {
               onClick={() => {
                 document.getElementById("waitlist-form")?.focus();
               }}
+              className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-400/70"
             >
               Join waitlist
             </Button>
