@@ -3,14 +3,16 @@ import ReactDOM from "react-dom/client";
 import App from "@/App.tsx";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/navbar";
-import Footer from "./components/footer";
+import Footer from "@/components/footer";
 import RootProvider from "@/components/root-provider";
 import { Toaster } from "@/components/ui/sonner";
+import Mininav from "@/components/navbar/mininav";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RootProvider>
       <Toaster richColors position="top-center" toastOptions={{}} />
+      <Mininav />
       <header className="bg-[var(--bg-hero)] w-full">
         <Navbar />
       </header>
