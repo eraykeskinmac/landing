@@ -13,7 +13,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Navbar />
       </header>
       <App />
-      <Footer />
+      <footer className="border-t">
+        <Footer />
+      </footer>
     </RootProvider>
   </React.StrictMode>
 );
