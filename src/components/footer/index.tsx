@@ -63,7 +63,7 @@ export default function Footer() {
               About
             </Link>
             <Link
-              to="/blogs"
+              to="/blog"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
             >
               Blogs
