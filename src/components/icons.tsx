@@ -38,7 +38,7 @@ export const Icons = {
       >
         <path
           d="M17.1922 3.06705L14.8562 5.40299C14.3844 10.8733 9.77107 15.1249 4.24998 15.1249C3.1156 15.1249 2.18045 14.9452 1.47029 14.5905C0.897634 14.3038 0.663259 13.9967 0.604665 13.9092C0.552419 13.8309 0.518554 13.7417 0.505602 13.6485C0.49265 13.5552 0.500946 13.4602 0.529869 13.3706C0.558792 13.2809 0.607595 13.199 0.672631 13.1309C0.737667 13.0628 0.817254 13.0102 0.905446 12.9772C0.925759 12.9694 2.7992 12.2499 3.98904 10.8803C3.32918 10.3378 2.75316 9.70072 2.27967 8.98971C1.31092 7.55143 0.22654 5.05299 0.560915 1.3194C0.571514 1.20076 0.615792 1.08762 0.688534 0.993308C0.761277 0.898992 0.859455 0.827427 0.971507 0.787039C1.08356 0.746651 1.20482 0.739122 1.32101 0.76534C1.43719 0.791557 1.54347 0.850429 1.62732 0.935022C1.65467 0.962365 4.22732 3.52096 7.37263 4.35065V3.87487C7.37144 3.37595 7.47008 2.88185 7.66275 2.42164C7.85542 1.96143 8.13822 1.54443 8.49451 1.19518C8.84052 0.849652 9.25224 0.576929 9.70536 0.393103C10.1585 0.209277 10.6438 0.11807 11.1328 0.124865C11.7887 0.131335 12.4318 0.307407 12.9995 0.635963C13.5672 0.964519 14.0403 1.43438 14.3726 1.99987H16.75C16.8737 1.99977 16.9946 2.03637 17.0975 2.10504C17.2003 2.17371 17.2805 2.27136 17.3279 2.38562C17.3752 2.49989 17.3876 2.62563 17.3634 2.74693C17.3393 2.86823 17.2797 2.97964 17.1922 3.06705Z"
-          fill="white"
+          fill="#0078d4"
         />
       </svg>
     );
@@ -79,6 +79,120 @@ export const Icons = {
           d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z"
         ></path>
       </svg>
+    );
+  },
+  Discord: function Discord({
+    width = 27,
+    height = 27,
+    className,
+  }: {
+    width?: number;
+    height?: number;
+    className?: string;
+  }) {
+    return (
+      <img
+        src="/integrations/discord.svg"
+        alt="discord"
+        width={width}
+        height={height}
+        className={className}
+      />
+    );
+  },
+  Gmail: function Gmail({
+    width = 30,
+    height = 30,
+    className,
+  }: {
+    width?: number;
+    height?: number;
+    className?: string;
+  }) {
+    return (
+      <img
+        src="/integrations/gmail.svg"
+        alt="Logo"
+        width={width}
+        height={height}
+        className={className}
+      />
+    );
+  },
+  Trello: function Trello({
+    width = 30,
+    height = 30,
+    className,
+  }: {
+    width?: number;
+    height?: number;
+    className?: string;
+  }) {
+    return (
+      <img
+        src="/integrations/trello.svg"
+        alt="Logo"
+        width={width}
+        height={height}
+        className={className}
+      />
+    );
+  },
+  Linear: function Linear({
+    width = 30,
+    height = 30,
+    className,
+  }: {
+    width?: number;
+    height?: number;
+    className?: string;
+  }) {
+    return (
+      <img
+        src="/integrations/linear.svg"
+        alt="Logo"
+        width={width}
+        height={height}
+        className={className}
+      />
+    );
+  },
+  Slack: function Slack({
+    width = 30,
+    height = 30,
+    className,
+  }: {
+    width?: number;
+    height?: number;
+    className?: string;
+  }) {
+    return (
+      <img
+        src="/integrations/slack.svg"
+        alt="Logo"
+        width={width}
+        height={height}
+        className={className}
+      />
+    );
+  },
+  Notion: function Notion({
+    width = 30,
+    height = 30,
+    className,
+  }: {
+    width?: number;
+    height?: number;
+    className?: string;
+  }) {
+    return (
+      <img
+        src="/integrations/notion.svg"
+        alt="Logo"
+        width={width}
+        height={height}
+        className={className}
+      />
     );
   },
 };
