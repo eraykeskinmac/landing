@@ -36,7 +36,7 @@
     --radius: 0.5rem;
 
     --shine-degree: 120deg;
-    --shine-color: rgba(116, 55, 186, 0.3);
+    --shine-color: #5661f654;
     --shine-effect: linear-gradient(
       var(--shine-degree),
       transparent,
@@ -46,6 +46,7 @@
     --shine-transition: all 0.45s ease-in-out;
 
     --bg-hero: #110D22;
+    --theme-color: #5661F6;
   }
 
   .dark {
@@ -95,7 +96,7 @@
   background-image: radial-gradient(
     ellipse at center,
     transparent 50%,
-    var(--violet-700) 250%
+    var(--theme-color) 250%
   );
   background-size: 100% 100%;
   transition: all 0.3s ease-in-out;
@@ -146,12 +147,10 @@
   }
 }
 
-/* circular gradient */
 .radial-gradient {
   background-image: radial-gradient(
     circle,
-    var(--violet-700) 5%,
-    var(--violet-800) 10%,
+    var(--theme-color) 5%,
     transparent 70%
   );
   filter: blur(5px)
@@ -160,5 +159,5 @@
 /* tailwind styles */
 
 .primary-gradient {
-  @apply bg-gradient-to-r from-[#757EEE] to-[#FFFFFF] bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-[var(--theme-color)] to-indigo-200 bg-clip-text text-transparent;
 }
