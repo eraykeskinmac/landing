@@ -47,7 +47,8 @@ bun dev
 
 - [x] shadcn init
 - [x] complete base layout
+- [x] add waitlist functionality
+- [x] tanstack router initial setup
 - [ ] light theme support
 - [ ] feature bento grid components
 - [ ] fix few layout issues
-- [ ] add waitlist functionality
