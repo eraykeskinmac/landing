@@ -34,7 +34,6 @@ export default function Grid2() {
               initial={{ pathLength: 0 }}
               whileInView={{
                 pathLength: 1,
-                strokeWidth: 2,
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 transition: { duration: 2 },
@@ -51,7 +50,6 @@ export default function Grid2() {
               initial={{ pathLength: 0 }}
               whileInView={{
                 pathLength: 1,
-                strokeWidth: 2,
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 transition: { duration: 2 },

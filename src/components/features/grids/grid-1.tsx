@@ -24,7 +24,7 @@ export default function Grid1() {
           day.
         </motion.p>
       </div>
-      <div className="relative w-1/2 lg:w-full aspect-square bg-secondary/30 border rounded-xl p-3">
+      <div className="relative w-1/2 md:w-full aspect-square bg-secondary/30 border rounded-xl p-3">
         <motion.div
           className="border w-full h-full rounded-full radial-gradient flex justify-center items-center"
           initial={{ scale: 0 }}

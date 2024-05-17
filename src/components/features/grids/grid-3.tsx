@@ -22,7 +22,7 @@ export default function Grid3() {
       >
         Seamlessly integrate with your tools to automate like never before.
       </motion.p>
-      <div className="relative w-2/3 lg:w-full aspect-square bg-secondary/30 border p-3 md:p-6 rounded-full">
+      <div className="relative w-2/3 md:w-full aspect-square bg-secondary/30 border p-3 md:p-6 rounded-full">
         <motion.div
           className="border w-full h-full rounded-full bg-secondary/40 flex justify-center items-center"
           initial={{ scale: 0 }}

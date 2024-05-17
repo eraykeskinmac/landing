@@ -12,49 +12,51 @@ export default function Grid4() {
         automate the workflow for future use where our system handle it
         automatically for for future repetitions.
       </p>
-      <div className="flex flex-row-reverse w-full justify-between pt-4">
+      <div className="flex flex-row-reverse w-full aspect-video lg:aspect-[3/1] justify-between pt-4">
         <motion.div
-          className="bottom-0 right-0 flex flex-col p-4 bg-secondary/30 rounded-tl-xl w-1/2 space-y-8"
+          className="absolute bottom-0 right-0 flex flex-col p-4 bg-secondary/30 rounded-tl-xl w-1/2 space-y-8"
           initial={{ x: "100%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { type: "tween" } }}
+          whileHover={{ scale: 1.05 }}
           viewport={{ once: true }}
         >
           <h1 className="font-semibold text-xl">Your workflow</h1>
-          <div className="w-full h-5 flex justify-between items-center">
+          <motion.div className="w-full h-5 flex justify-between items-center cursor-pointer" whileHover={{ scale: 1.05 }}>
             <div className="flex gap-2">
               <Icon fill="#FBADE0" />
               <div className="flex flex-col justify-between">
-                <p>Jira ticket update</p>
+                <p className="text-xs md:text-sm lg:text-base">Jira ticket update</p>
                 <motion.div className="w-full h-4 rounded-full bg-secondary animate-pulse"></motion.div>
               </div>
             </div>
             <EllipsisVertical size={14} />
-          </div>
-          <div className="w-full h-5 flex justify-between items-center">
+          </motion.div>
+          <motion.div className="w-full h-5 flex justify-between items-center cursor-pointer" whileHover={{ scale: 1.05 }}>
             <div className="flex gap-2">
               <Icon fill="#6893FF" />
               <div className="flex flex-col justify-between">
-                <p>Schedule meetings</p>
+                <p className="text-xs md:text-sm lg:text-base">Schedule meetings</p>
                 <div className="w-full h-4 rounded-full bg-secondary animate-pulse delay-75"></div>
               </div>
             </div>
             <EllipsisVertical size={14} />
-          </div>
-          <div className="w-full h-5 flex justify-between items-center">
+          </motion.div>
+          <motion.div className="w-full h-5 flex justify-between items-center cursor-pointer" whileHover={{ scale: 1.05 }}>
             <div className="flex gap-2">
               <Icon fill="#DFFF9D" />
               <div className="flex flex-col justify-between">
-                <p>Linear cycles</p>
+                <p className="text-xs md:text-sm lg:text-base">Linear cycles</p>
                 <div className="w-full h-4 rounded-full bg-secondary animate-pulse delay-150"></div>
               </div>
             </div>
             <EllipsisVertical size={14} />
-          </div>
+          </motion.div>
         </motion.div>
         <motion.div
-          className="bottom-0 left-0 flex flex-col p-4 bg-secondary/30 rounded-tr-xl w-[45%] space-y-8"
+          className="absolute bottom-0 left-0 flex flex-col p-4 bg-secondary/30 rounded-tr-xl w-[45%] space-y-8"
           initial={{ x: "-100%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { type: "tween" } }}
+          whileHover={{ scale: 1.05 }}
           viewport={{ once: true }}
         >
           <h1 className="text-lg lg:text-xl font-bold">Automated threads</h1>
