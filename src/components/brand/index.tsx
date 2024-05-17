@@ -1,57 +1,90 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { HoverBorderGradient } from "@/components/ui/gradient-button";
 
 export default function Brand() {
+  const borderRadius = "1rem";
   return (
-    <section className="w-full aspect-[1923/815] flex justify-center items-center my-8">
-      <div className="relative w-full lg:w-[80%] mx-auto rounded-2xl border border-[#4048c04c] border-b-0 flex flex-col gap-5 pt-10 items-center pb-16 md:pb-24 lg:pb-36 overflow-hidden">
-        <motion.h1 
-          className="text-center absolute w-full font-bold tracking-wider -bottom-1 lg:-bottom-5 text-5xl md:text-7xl lg:text-9xl uppercase text-muted-foreground -z-10 opacity-70"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 0, transition: { duration: 0.5, type: "tween" } }}
-          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5, type: "tween" } }}
+    <section className="w-full aspect-[1923/815] flex justify-center items-center">
+      <HoverBorderGradient
+        className="bg-background w-full h-full p-0"
+        containerClassName="rounded-2xl lg:w-[80%] w-full bg-background dark:bg-transparent border-none p-0"
+        backgroundClassname="bg-black inset-[1px]"
+        as="div"
+      >
+        <div
+          className="relative w-full mx-auto border border-[#4048c04c] border-b-0 flex flex-col gap-5 pt-10 items-center pb-16 md:pb-24 lg:pb-36 overflow-hidden"
+          style={{
+            borderRadius: borderRadius,
+          }}
         >
-          LEAPFLOW
-        </motion.h1>
-        <Gradient />
-        <div className="flex justify-between gap-5 items-center tracking-wide text-sm text-muted-foreground">
-          <motion.p 
-            className="uppercase"
-            initial={{ x: 25, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1, transition: { type: "tween", duration: 0.5 } }}
+          <motion.h1
+            className="text-center absolute w-full font-bold tracking-wider -bottom-1 lg:-bottom-5 text-5xl md:text-7xl lg:text-9xl uppercase text-muted-foreground -z-10 opacity-70"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 0,
+              transition: { duration: 0.5, type: "tween" },
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: { duration: 0.5, type: "tween" },
+            }}
           >
-            Integration
-          </motion.p>
-          <motion.div 
-            className="w-2 h-2 bg-[var(--theme-color)]"
-            initial={{ rotate: 0 }}
-            whileInView={{ rotate: 45 }}
-          />
-          <p className="uppercase">Workflows</p>
-          <motion.div 
-            className="w-2 h-2 bg-[var(--theme-color)]"
-            initial={{ rotate: 0 }}
-            whileInView={{ rotate: 45, transition: { duration: 1 } }}
-          />
-          <motion.p 
-            className="uppercase"
-            initial={{ x: -25, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1, transition: { type: "tween", duration: 0.5 } }}
-          >
-            AI Automation
-          </motion.p>
+            LEAPFLOW
+          </motion.h1>
+          <Gradient />
+          <div className="flex justify-between gap-5 items-center tracking-wide text-sm text-muted-foreground">
+            <motion.p
+              className="uppercase"
+              initial={{ x: 25, opacity: 0 }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                transition: { type: "tween", duration: 0.5 },
+              }}
+            >
+              Integration
+            </motion.p>
+            <motion.div
+              className="w-2 h-2 bg-[var(--theme-color)]"
+              initial={{ rotate: 0 }}
+              whileInView={{ rotate: 45 }}
+            />
+            <p className="uppercase">Workflows</p>
+            <motion.div
+              className="w-2 h-2 bg-[var(--theme-color)]"
+              initial={{ rotate: 0 }}
+              whileInView={{ rotate: 45, transition: { duration: 1 } }}
+            />
+            <motion.p
+              className="uppercase"
+              initial={{ x: -25, opacity: 0 }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+                transition: { type: "tween", duration: 0.5 },
+              }}
+            >
+              AI Automation
+            </motion.p>
+          </div>
+          <div className="text-lg md:text-3xl text-center">
+            <h1>Increase your efficiency with ease,</h1>
+            <h1>and transform your workflow.</h1>
+          </div>
+          <Button
+              size="sm"
+              onClick={() => {
+                document.getElementById("waitlist-form")?.focus();
+              }}
+              className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-800 shine shine-hover"
+            >
+              Join waitlist
+            </Button>
         </div>
-        <div className="text-lg md:text-3xl text-center">
-          <h1>Increase your efficiency with ease,</h1>
-          <h1>and transform your workflow.</h1>
-        </div>
-        <Button
-          className="z-10"
-          onClick={() => document.getElementById("waitlist-form")?.focus()}
-        >
-          Join waitlist
-        </Button>
-      </div>
+      </HoverBorderGradient>
     </section>
   );
 }
