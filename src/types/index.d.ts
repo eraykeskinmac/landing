@@ -19,3 +19,11 @@ export type NavItem = {
 }
 
 export type DefaultNavConfig = NavItem[]
+
+export type PersonProfile = {
+  name: string;
+  designation: string;
+  image: string;
+  twitter: string;
+  linkedin: string;
+}
