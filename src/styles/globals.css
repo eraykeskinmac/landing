@@ -162,3 +162,7 @@
 .primary-gradient {
   @apply bg-gradient-to-r from-[var(--theme-color)] to-indigo-200 bg-clip-text text-transparent;
 }
+
+.head-text {
+  @apply text-4xl font-bold tracking-tight leading-[1.5] md:text-5xl lg:text-6xl;
+}
