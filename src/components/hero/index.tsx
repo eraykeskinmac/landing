@@ -36,7 +36,7 @@ export default function Hero() {
     >
       <div className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-8 z-30">
         <AnnouncementBar />
-        <p className="font-medium text-4xl lg:text-6xl max-w-2xl w-full text-center">
+        <p className="font-bold text-4xl lg:text-6xl max-w-2xl w-full text-center">
           Your AI Agent to
           <br />
           <span className="primary-gradient">supercharge workflow</span>
