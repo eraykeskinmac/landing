@@ -9,6 +9,7 @@ export default function Grid3() {
         className="lg:text-xl"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
       >
         Easy integration
       </motion.h1>
@@ -17,6 +18,7 @@ export default function Grid3() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
+        viewport={{ once: true }}
       >
         Seamlessly integrate with your tools to automate like never before.
       </motion.p>
@@ -26,25 +28,37 @@ export default function Grid3() {
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         />
         <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-2xl md:text-4xl lg:text-6xl primary-gradient cursor-default flex items-center">
-          <Button size="icon" className="rounded-full">
-            <Icons.Slack />
-          </Button>
-          <Button size="icon" className="rounded-full -translate-x-4">
-            <Icons.Discord />
-          </Button>
-          <Button size="icon" className="rounded-full -translate-x-8">
-            <Icons.Trello />
-          </Button>
-          <Button size="icon" className="rounded-full -translate-x-12">
-            <Icons.Notion />
-          </Button>
-          <Button size="icon" className="rounded-full -translate-x-16">
-            <Icons.Linear />
-          </Button>
+          {Integrations.map((integration) => (
+            integration.icon
+          ))}
         </motion.div>
       </div>
     </div>
   );
 }
+
+const Integrations = [
+  {
+    name: "Slack",
+    icon: <Button size="icon" className="rounded-full"><Icons.Slack /></Button>,
+  },
+  {
+    name: "Discord",
+    icon: <Button size="icon" className="rounded-full"><Icons.Discord /></Button>,
+  },
+  {
+    name: "Trello",
+    icon: <Button size="icon" className="rounded-full"><Icons.Trello /></Button>,
+  },
+  {
+    name: "Notion",
+    icon: <Button size="icon" className="rounded-full"><Icons.Notion /></Button>,
+  },
+  {
+    name: "Linear",
+    icon: <Button size="icon" className="rounded-full"><Icons.Linear /></Button>,
+  },
+];
