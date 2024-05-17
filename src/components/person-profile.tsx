@@ -10,10 +10,10 @@ export default function PersonProfile({ name, designation, image, twitter, linke
       <h2 className="font-semibold text-lg mt-2">{name}</h2>
       <h3 className="text-muted-foreground">{designation}</h3>
       <div className="flex items-center gap-5 mt-1">
-        <a href={twitter} target="_blank" className="hover:scale-110 duration-100 ease-in-out transition-all transform-gpu">
+        <a href={twitter} target="_blank" className="grayscale hover:scale-110 duration-100 ease-in-out transition-all transform-gpu">
           <Icons.Twitter />
         </a>
-        <a href={linkedin} target="_blank" className="hover:scale-110 duration-100 ease-in-out transition-all transform-gpu">
+        <a href={linkedin} target="_blank" className="grayscale hover:scale-110 duration-100 ease-in-out transition-all transform-gpu">
           <Icons.LinkedIn />
         </a>
       </div>

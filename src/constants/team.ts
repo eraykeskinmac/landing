@@ -3,7 +3,7 @@ import type { PersonProfile } from "@/types";
 export const team: PersonProfile[] = [
   {
     name: "Suhas Sumukh",
-    designation: "Co-founder & CEO",
+    designation: "Founder & CEO",
     image: "/team/suhas.png",
     twitter: "https://x.com/suhasasumukh",
     linkedin: "https://www.linkedin.com/in/suhasasumukh"

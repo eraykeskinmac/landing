@@ -5,7 +5,7 @@ import { advisors } from "@/constants/advisor";
 import Brand from "@/components/brand";
 
 export const Route = createLazyFileRoute("/about")({
-  component: () => <AboutPage />,
+  component: AboutPage,
 });
 
 function AboutPage() {
