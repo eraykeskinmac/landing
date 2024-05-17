@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="relative w-full h-12">
         <img
           ref={imageRef}
-          src="/dashboard.svg"
+          src="/dashboard.png"
           className="z-20 py-2 md:py-10 w-full lg:px-0 px-5 absolute"
         />
         <img
