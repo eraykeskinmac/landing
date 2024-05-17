@@ -21,6 +21,7 @@ export const Navbar = () => {
           onClick={() => {
             document.getElementById("waitlist-form")?.focus();
           }}
+          containerClassName="border bg-black/10 dark:bg-white/10"
         >
           Join waitlist
         </HoverBorderGradient>
@@ -61,7 +62,7 @@ export const Navbar = () => {
           )}
         </motion.div>
       </div>
-      <AnimatePresence>{showNavbar && <MobileNav />}</AnimatePresence>
+      <AnimatePresence>{showNavbar && <MobileNav onClick={() => setShowNavbar(!showNavbar)} />}</AnimatePresence>
     </div>
   );
 };
