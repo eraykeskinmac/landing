@@ -7,8 +7,8 @@ import { Link } from "@tanstack/react-router";
 export default function Footer() {
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col py-4 lg:py-16 px-2 md:px-3 lg:px-0">
-      <div className="flex justify-between">
-        <div className="space-y-5">
+      <div className="flex justify-between flex-wrap gap-5">
+        <div className="space-y-5 md:w-auto w-full flex flex-col md:items-start items-center">
           <Link to="/">
             <Icons.Logo />
           </Link>
@@ -18,7 +18,7 @@ export default function Footer() {
               onClick={() => {
                 document.getElementById("waitlist-form")?.focus();
               }}
-              className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-400/70"
+              className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-800 shine shine-hover"
             >
               Join waitlist
             </Button>
@@ -38,7 +38,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex gap-12">
+        <div className="flex gap-12 justify-center md:w-auto w-full">
           <div className="space-y-3 text-muted-foreground flex flex-col">
             <h1 className="text-primary">Products</h1>
             <Link
