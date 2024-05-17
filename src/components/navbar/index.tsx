@@ -12,9 +12,9 @@ export const Navbar = () => {
 
   return (
     <div className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-0 px-6">
-      <a href="/">
+      <Link to="/">
         <Icons.Logo />
-      </a>
+      </Link>
       <Links />
       <div className="flex justify-center items-center gap-x-4">
         <HoverBorderGradient
