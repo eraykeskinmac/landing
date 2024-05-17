@@ -45,7 +45,7 @@ const JoinWaitlistButton = () => {
       onClick={() => {
         document.getElementById("waitlist-form")?.focus();
       }}
-      className="bg-background no-underline group cursor-pointer relative shadow-2xl shadow-indigo-900 rounded-full p-px text-xs font-semibold leading-6 inline-block"
+      className="hidden bg-background no-underline group cursor-pointer relative shadow-2xl shadow-indigo-900 rounded-full p-px text-xs font-semibold leading-6 md:inline-block"
     >
       <span className="absolute inset-0 overflow-hidden rounded-full">
         <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(86,97,246,0.6)_0%,rgba(86,97,246,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

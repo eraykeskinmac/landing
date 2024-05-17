@@ -22,7 +22,7 @@ export default function Grid3() {
       >
         Seamlessly integrate with your tools to automate like never before.
       </motion.p>
-      <div className="relative w-full aspect-square bg-secondary/30 border p-3 md:p-6 rounded-full">
+      <div className="relative w-2/3 lg:w-full aspect-square bg-secondary/30 border p-3 md:p-6 rounded-full">
         <motion.div
           className="border w-full h-full rounded-full bg-secondary/40 flex justify-center items-center"
           initial={{ scale: 0 }}
@@ -31,8 +31,8 @@ export default function Grid3() {
           viewport={{ once: true }}
         />
         <motion.div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-2xl md:text-4xl lg:text-6xl primary-gradient cursor-default flex items-center">
-          {Integrations.map((integration) => (
-            integration.icon
+          {Integrations.map((integration, i) => (
+            <integration.Icon key={i} />
           ))}
         </motion.div>
       </div>
@@ -43,22 +43,22 @@ export default function Grid3() {
 const Integrations = [
   {
     name: "Slack",
-    icon: <Button size="icon" className="rounded-full"><Icons.Slack /></Button>,
+    Icon: () => <Button size="icon" className="rounded-full"><Icons.Slack /></Button>,
   },
   {
     name: "Discord",
-    icon: <Button size="icon" className="rounded-full"><Icons.Discord /></Button>,
+    Icon: () => <Button size="icon" className="rounded-full"><Icons.Discord /></Button>,
   },
   {
     name: "Trello",
-    icon: <Button size="icon" className="rounded-full"><Icons.Trello /></Button>,
+    Icon: () => <Button size="icon" className="rounded-full"><Icons.Trello /></Button>,
   },
   {
     name: "Notion",
-    icon: <Button size="icon" className="rounded-full"><Icons.Notion /></Button>,
+    Icon: () => <Button size="icon" className="rounded-full"><Icons.Notion /></Button>,
   },
   {
     name: "Linear",
-    icon: <Button size="icon" className="rounded-full"><Icons.Linear /></Button>,
+    Icon: () => <Button size="icon" className="rounded-full"><Icons.Linear /></Button>,
   },
 ];

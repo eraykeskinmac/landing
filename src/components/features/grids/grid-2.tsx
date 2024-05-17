@@ -28,9 +28,9 @@ export default function Grid2() {
               id="Path 887"
               d="M1.1377 141.432L48.4117 106.576L66.385 117.648L133.686 66.8882L188.01 159.906L236.548 106.576L296.656 117.648L319.251 66.8882L355.156 61.0808L441.156 88.0841L510.69 1L604.69 24.3421"
               stroke="var(--theme-color)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               initial={{ pathLength: 0 }}
               whileInView={{
                 pathLength: 1,
@@ -44,10 +44,10 @@ export default function Grid2() {
               id="Path 888"
               d="M3.19727 185.976L52.0481 137.459L68.4475 170.496L133.466 133.679L190.078 198L238.618 163.29L298.729 170.496L321.325 137.459L357.231 133.679L452.625 170.496L537.3 84.8066L586.151 137.459"
               stroke="#4F4F4F"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-dasharray="8 8"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="8 8"
               initial={{ pathLength: 0 }}
               whileInView={{
                 pathLength: 1,
