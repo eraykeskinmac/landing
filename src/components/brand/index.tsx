@@ -9,6 +9,7 @@ export default function Brand() {
           className="text-center absolute w-full font-bold tracking-wider -bottom-1 lg:-bottom-5 text-5xl md:text-7xl lg:text-9xl uppercase text-muted-foreground -z-10 opacity-70"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5, type: "tween" } }}
+          viewport={{ once: true }}
         >
           LEAPFLOW
         </motion.h1>
@@ -73,6 +74,7 @@ const Gradient = () => {
             stroke="white"
             initial={{ opacity: 0, strokeWidth: 0 }}
             whileInView={{ opacity: 0.7, strokeWidth: 120 }}
+            viewport={{ once: true }}
           />
         </g>
         <g id="Ellipse 42 (Stroke)" filter="url(#filter1_f_129_515)">
