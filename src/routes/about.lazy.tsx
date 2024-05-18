@@ -11,7 +11,7 @@ export const Route = createLazyFileRoute("/about")({
 function AboutPage() {
   return (
     <main className="w-full min-h-screen bg-[var(--bg-hero)] px-1 lg:px-0">
-      <div className="w-full max-w-5xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <h1 className="head-text mt-12 md:mt-16 lg:mt-24">Our mission</h1>
         <div className="space-y-8 mt-5">
           <p className="text-muted-foreground text-lg max-w-xl">
@@ -30,13 +30,13 @@ function AboutPage() {
           We are a passionate team of developers & designers, working hard to
           make tasks easier with smart automations.
         </p>
-        <div id="team" className="w-auto grid grid-cols-2 md:grid-cols-3 my-12 gap-3 gap-y-10">
+        <div id="team" className="w-auto grid grid-cols-2 md:grid-cols-5 my-12 gap-3 gap-y-10">
           {team.map((profile, index) => (
             <PersonProfile key={index} {...profile} />
           ))}
         </div>
         <h1 className="head-text mt-20">Advisors</h1>
-        <div id="team" className="w-auto grid grid-cols-2 md:grid-cols-3 my-12">
+        <div id="team" className="w-auto grid grid-cols-2 md:grid-cols-5 my-12">
           {advisors.map((profile, index) => (
             <PersonProfile key={index} {...profile} />
           ))}
