@@ -14,7 +14,9 @@ function App() {
         <Hero />
       </div>
       <FeaturesSection />
-      <Brand />
+      <div className='px-1 lg:px-0 w-full'>
+        <Brand />
+      </div>
     </div>
   );
 }
