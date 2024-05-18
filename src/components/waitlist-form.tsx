@@ -48,4 +48,4 @@ export default function WaitlistForm() {
   );
 }
 
-const placeholders = ["Join the waitlist"];
+const placeholders = ["Join the waitlist..."];
