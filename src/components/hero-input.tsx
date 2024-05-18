@@ -170,7 +170,7 @@ export function HeroInput({
     >
       <canvas
         className={cn(
-          "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20",
+          "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter pr-20",
           !animating ? "opacity-0" : "opacity-100"
         )}
         ref={canvasRef}
