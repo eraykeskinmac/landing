@@ -19,7 +19,7 @@ export default function MobileNav({ onClick }: { onClick: () => void }) {
       animate="visible"
       exit="hidden"
       variants={variants}
-      className="absolute  px-5 z-50 flex justify-start items-start gap-y-5 flex-col h-screen rounded-r-xl py-5 left-0 top-5  max-w-[200px] w-full bg-secondary"
+      className="absolute  px-5 z-50 flex justify-start items-start gap-y-5 flex-col h-screen rounded-r-xl py-5 left-0 top-5  max-w-[200px] w-full bg-background/60 backdrop-blur-md"
     >
       <Link to="/" onClick={onClick}>
         <Icons.Logo />
