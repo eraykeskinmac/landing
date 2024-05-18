@@ -12,9 +12,9 @@ export default function Grid4() {
         automate the workflow for future use where our system handle it
         automatically for for future repetitions.
       </p>
-      <div className="flex flex-row-reverse w-full aspect-video lg:aspect-[3/1] justify-between pt-4">
+      <div className="flex flex-row-reverse w-full justify-between pt-4">
         <motion.div
-          className="absolute bottom-0 right-0 flex flex-col p-4 bg-secondary/30 rounded-tl-xl w-1/2 space-y-8"
+          className="flex flex-col p-4 bg-secondary/30 rounded-tl-xl w-1/2 space-y-8"
           initial={{ x: "100%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { type: "tween" } }}
           whileHover={{ scale: 1.05 }}
@@ -53,7 +53,7 @@ export default function Grid4() {
           </motion.div>
         </motion.div>
         <motion.div
-          className="absolute bottom-0 left-0 flex flex-col p-4 bg-secondary/30 rounded-tr-xl w-[45%] space-y-8"
+          className="flex flex-col p-4 bg-secondary/30 rounded-tr-xl w-[45%] space-y-8"
           initial={{ x: "-100%", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { type: "tween" } }}
           whileHover={{ scale: 1.05 }}
@@ -67,12 +67,12 @@ export default function Grid4() {
               whileInView={{ width: "100%", opacity: 1 }}
             ></motion.div>
             <motion.div
-              className="h-5 w-2/3 bg-secondary rounded-lg animate-pulse delay-75"
+              className="h-5 w-2/3 bg-secondary rounded-lg animate-pulse"
               initial={{ width: "0%", opacity: 0 }}
               whileInView={{ width: "75%", opacity: 1 }}
             ></motion.div>
             <motion.div
-              className="h-5 w-1/2 bg-secondary rounded-lg animate-pulse delay-100"
+              className="h-5 w-1/2 bg-secondary rounded-lg animate-pulse"
               initial={{ width: "0%", opacity: 0 }}
               whileInView={{ width: "50%", opacity: 1 }}
             ></motion.div>
