@@ -35,7 +35,7 @@ export default function Hero() {
       className="relative flex flex-col items-center w-full max-w-7xl mx-auto"
       animate={{ marginBottom: imageHeight / 1.5 }}
     >
-      <div className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-8 z-30">
+      <div className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-4 z-30 mb-4">
         <AnnouncementBar />
         <p className="font-bold text-4xl lg:text-6xl max-w-2xl w-full text-center">
           Your AI Agent to
