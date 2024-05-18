@@ -11,7 +11,7 @@ export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
-    <div className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-0 px-6">
+    <div className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-0 px-6 z-[1000]">
       <Link to="/">
         <Icons.Logo />
       </Link>
