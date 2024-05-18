@@ -52,3 +52,4 @@ bun dev
 - [ ] light theme support
 - [ ] feature bento grid components
 - [ ] fix few layout issues
+- [ ] mdx blog

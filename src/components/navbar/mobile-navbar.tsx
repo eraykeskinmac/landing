@@ -10,7 +10,7 @@ const variants = {
   hidden: { x: "-100%", transition: { stiffness: 200 } },
 };
 
-export default function MobileNav() {
+export default function MobileNav({ onClick }: { onClick: () => void }) {
   const pathName = window.location.pathname;
 
   return (
@@ -19,11 +19,11 @@ export default function MobileNav() {
       animate="visible"
       exit="hidden"
       variants={variants}
-      className="absolute  px-5 z-50 flex justify-start items-start gap-y-5 flex-col h-screen rounded-r-xl py-5 left-0 top-5  max-w-[200px] w-full bg-secondary"
+      className="absolute  px-5 z-50 flex justify-start items-start gap-y-5 flex-col h-screen rounded-r-xl py-5 left-0 top-5  max-w-[200px] w-full bg-background/60 backdrop-blur-md"
     >
-      <a href="/">
+      <Link to="/" onClick={onClick}>
         <Icons.Logo />
-      </a>
+      </Link>
       <Separator className="bg-background/30 h-1" />
       <div className="flex bg-transparent gap-x-5 flex-col gap-y-4 justify-start items-start  ">
         {defaultNavConfig.map((item) => {
@@ -36,6 +36,7 @@ export default function MobileNav() {
                 pathName !== item.href && "text-muted-foreground"
               )}
               aria-disabled={item.disable}
+              onClick={onClick}
             >
               {item.title}
             </Link>

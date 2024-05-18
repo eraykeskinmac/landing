@@ -1,7 +1,8 @@
 import AnnouncementBar from "./announcement-bar";
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import WaitlistForm from "@/components/waitlist-form";
+import { HoverBorderGradient } from "@/components/ui/gradient-button";
 
 export default function Hero() {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -30,13 +31,13 @@ export default function Hero() {
   }, [imageRef]);
 
   return (
-    <motion.div 
+    <motion.div
       className="relative flex flex-col items-center w-full max-w-7xl mx-auto"
       animate={{ marginBottom: imageHeight / 1.5 }}
     >
-      <div className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-8 z-30">
+      <div className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-4 z-30 mb-4">
         <AnnouncementBar />
-        <p className="font-medium text-4xl lg:text-6xl max-w-2xl w-full text-center">
+        <p className="font-bold text-4xl lg:text-6xl max-w-2xl w-full text-center">
           Your AI Agent to
           <br />
           <span className="primary-gradient">supercharge workflow</span>
@@ -48,11 +49,16 @@ export default function Hero() {
       </div>
       <WaitlistForm />
       <div className="relative w-full h-12">
-        <img
-          ref={imageRef}
-          src="/dashboard.png"
-          className="z-20 py-2 md:py-10 w-full lg:px-0 px-5 absolute"
-        />
+        <HoverBorderGradient 
+          as="div"
+          backgroundClassname="bg-[var(--bg-hero)]"
+          containerClassName="absolute z-20 my-2 md:my-10 lg:mx-2 w-full h-auto rounded-xl lg:rounded-2xl bg-transparent dark:bg-transparent border-none"
+          className="w-full h-full bg-transparent p-1"
+        >
+          <div className="w-full h-full overflow-hidden flex justify-center items-center rounded-xl lg:rounded-2xl">
+            <img ref={imageRef} src="/dashboard.png" className="w-full" />
+          </div>
+        </HoverBorderGradient>
         <img
           src="/radialElipse.svg"
           className="absolute z-10 bottom-1/2 translate-y-[65%] opacity-80"

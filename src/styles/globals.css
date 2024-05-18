@@ -43,7 +43,7 @@
       var(--shine-color),
       transparent
     );
-    --shine-transition: all 0.45s ease-in-out;
+    --shine-transition: all 0.75s ease-in-out;
 
     --bg-hero: #110D22;
     --theme-color: #5661F6;
@@ -131,7 +131,7 @@
 
 .shine-anim {
   &::before {
-    animation: shine 8s ease-in-out infinite;
+    animation: shine 4s ease-in-out infinite;
   }
 }
 
@@ -161,4 +161,8 @@
 
 .primary-gradient {
   @apply bg-gradient-to-r from-[var(--theme-color)] to-indigo-200 bg-clip-text text-transparent;
+}
+
+.head-text {
+  @apply text-4xl font-bold tracking-tight leading-[1.5] md:text-5xl lg:text-6xl;
 }
