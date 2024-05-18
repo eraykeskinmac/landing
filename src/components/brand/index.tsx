@@ -79,7 +79,7 @@ export default function Brand() {
               onClick={() => {
                 document.getElementById("waitlist-form")?.focus();
               }}
-              className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-800 shine shine-hover"
+              className="shine shine-anim"
             >
               Join waitlist
             </Button>
