@@ -30,13 +30,13 @@ function AboutPage() {
           We are a passionate team of developers & designers, working hard to
           make tasks easier with smart automations.
         </p>
-        <div id="team" className="w-auto max-w-4xl grid grid-cols-2 md:grid-cols-5 my-12 gap-3 gap-y-10">
+        <div id="team" className="w-auto max-w-4xl grid grid-cols-2 md:grid-cols-4 my-12 gap-3 gap-y-10">
           {team.map((profile, index) => (
             <PersonProfile key={index} {...profile} />
           ))}
         </div>
         <h1 className="head-text mt-20">Advisors</h1>
-        <div id="team" className="w-auto max-w-4xl grid grid-cols-2 md:grid-cols-5 my-12">
+        <div id="team" className="w-auto max-w-4xl grid grid-cols-2 md:grid-cols-4 my-12">
           {advisors.map((profile, index) => (
             <PersonProfile key={index} {...profile} />
           ))}
