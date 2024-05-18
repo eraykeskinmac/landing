@@ -27,10 +27,10 @@ function AboutPage() {
         </div>
         <h1 className="head-text mt-16">Team</h1>
         <p className="text-muted-foreground text-lg max-w-lg mt-5">
-          We are a passionate team of developers & designers, working hard to
+          We are a passionate team of developers & designers, working together to
           make tasks easier with smart automations.
         </p>
-        <div id="team" className="w-auto flex justify-center flex-wrap my-12 gap-x-3 md:gap-x-5 lg:gap-x-16 gap-y-10">
+        <div id="team" className="w-auto flex lg:justify-start justify-center flex-wrap my-12 gap-x-3 md:gap-x-5 lg:gap-x-16 gap-y-10">
           {team.map((profile, index) => (
             <PersonProfile key={index} {...profile} />
           ))}
