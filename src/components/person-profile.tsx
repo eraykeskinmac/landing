@@ -9,12 +9,12 @@ export default function PersonProfile({ name, designation, image, twitter, linke
       </div>
       <h2 className="font-semibold text-lg mt-2">{name}</h2>
       <h3 className="text-muted-foreground">{designation}</h3>
-      <div className="flex items-center gap-5 mt-1">
+      <div className="flex items-center gap-1 mt-1">
         <a href={twitter} target="_blank" className="grayscale hover:scale-110 duration-100 ease-in-out transition-all transform-gpu">
-          <Icons.Twitter />
+          <Icons.Twitter width={16} height={16} />
         </a>
         <a href={linkedin} target="_blank" className="grayscale hover:scale-110 duration-100 ease-in-out transition-all transform-gpu">
-          <Icons.LinkedIn />
+          <Icons.LinkedIn width={20} height={20} />
         </a>
       </div>
     </div>
