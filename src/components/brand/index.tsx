@@ -37,7 +37,7 @@ export default function Brand() {
           <Gradient />
           <div className="flex justify-between gap-5 items-center tracking-wide text-sm text-muted-foreground">
             <motion.p
-              className="uppercase"
+              className="uppercase text-xs md:text-base"
               initial={{ x: 25, opacity: 0 }}
               whileInView={{
                 x: 0,
@@ -52,14 +52,14 @@ export default function Brand() {
               initial={{ rotate: 0 }}
               whileInView={{ rotate: 45 }}
             />
-            <p className="uppercase">Workflows</p>
+            <p className="uppercase text-xs md:text-base">Workflows</p>
             <motion.div
               className="w-2 h-2 bg-[var(--theme-color)]"
               initial={{ rotate: 0 }}
               whileInView={{ rotate: 45, transition: { duration: 1 } }}
             />
             <motion.p
-              className="uppercase"
+              className="uppercase text-xs md:text-base"
               initial={{ x: -25, opacity: 0 }}
               whileInView={{
                 x: 0,
