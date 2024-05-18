@@ -11,7 +11,7 @@ export const Route = createLazyFileRoute("/about")({
 function AboutPage() {
   return (
     <main className="w-full min-h-screen bg-[var(--bg-hero)] px-1 lg:px-0">
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-5xl mx-auto">
         <h1 className="head-text mt-12 md:mt-16 lg:mt-24">Our mission</h1>
         <div className="space-y-8 mt-5">
           <p className="text-muted-foreground text-lg max-w-xl">
