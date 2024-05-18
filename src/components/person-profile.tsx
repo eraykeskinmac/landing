@@ -4,7 +4,7 @@ import type { PersonProfile as PersonProfileProps } from "@/types"
 export default function PersonProfile({ name, designation, image, twitter, linkedin }: PersonProfileProps) {
   return (
     <div className="max-w-[12rem]">
-      <div className="w-full aspect-square rounded-lg overflow-hidden group">
+      <div className="w-full max-w-40 aspect-square rounded-lg overflow-hidden group">
         <img src={image} className="w-full group-hover:scale-110 duration-200 transition-all transform-gpu ease-in-out" alt={name} />
       </div>
       <h2 className="font-semibold text-lg mt-2">{name}</h2>
