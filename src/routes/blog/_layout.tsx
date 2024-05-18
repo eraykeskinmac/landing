@@ -15,7 +15,7 @@ export const Route = createFileRoute("/blog/_layout")({
 
     return (
       <main id="blog" className="w-full min-h-screen bg-[var(--bg-hero)]">
-        <div className="w-full max-w-7xl mx-auto mt-6 lg:mt-16">
+        <div className="w-full max-w-7xl mx-auto mt-6 lg:mt-20">
           <div
             id="categories"
             className="flex md:inline-flex max-w-[95%] mx-auto items-center gap-2 lg:gap-4 p-1 rounded-full bg-indigo-300/30 border border-indigo-500/30"
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/blog/_layout")({
             })}
           </div>
           <div className="px-2 md:px-0 w-full mx-auto">
-            <h1 className="head-text my-8 md:my-10">{activeCategory?.name}</h1>
+            <h1 className="head-text mt-8 md:mt-14">{activeCategory?.name}</h1>
             <Outlet />
           </div>
         </div>
