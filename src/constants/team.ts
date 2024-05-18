@@ -23,6 +23,13 @@ export const team: PersonProfile[] = [
     linkedin: "https://www.linkedin.com/in/rudrodip"
   },
   {
+    name: "Akshat Goel",
+    designation: "Full-stack Engineer",
+    image: "/team/akshat.png",
+    twitter: "https://x.com/akshatgoel0",
+    linkedin: "https://www.linkedin.com/in/akshatgoel7"
+  },
+  {
     name: "Balaji Varatharajan",
     designation: "AI Engineer",
     image: "/team/balaji.png",
