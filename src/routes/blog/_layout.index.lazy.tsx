@@ -8,7 +8,7 @@ export const Route = createLazyFileRoute("/blog/_layout/")({
 
 function BlogPage() {
   return (
-    <main className="w-full mt-12 lg:mt-16 min-h-screen">
+    <main className="w-full mt-12 md:mt-16 lg:mt-10 min-h-screen">
       <div className="flex flex-wrap gap-3">
         {blogs.map((blog) => (
           <BlogCard key={blog.slug} blog={blog} />

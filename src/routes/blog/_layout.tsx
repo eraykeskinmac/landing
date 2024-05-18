@@ -15,10 +15,10 @@ export const Route = createFileRoute("/blog/_layout")({
 
     return (
       <main id="blog" className="w-full min-h-screen bg-[var(--bg-hero)]">
-        <div className="w-full max-w-7xl mx-auto mt-6 lg:mt-16">
+        <div className="w-full max-w-7xl mx-auto bg-[#3D3F63] my-10 px-0 rounded-lg h-[calc(100vh-100px)]">
           <div
             id="categories"
-            className="flex md:inline-flex max-w-[95%] mx-auto items-center gap-2 lg:gap-4 p-1 rounded-full bg-indigo-300/30 border border-indigo-500/30"
+            className="flex md:inline-flex bg-[#110D22] w-[34.9%] rounded-br-sm  items-center gap-2 lg:gap-4 px-0 pt-0  "
           >
             {categories.map((category, index) => {
               return (
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/blog/_layout")({
                   className={cn(
                     "p-1 lg:p-2 rounded-[inherit] text-xs lg:text-sm",
                     activeCategory?.slug === category.slug
-                      ? "text-slate-800 bg-gradient-to-r from-indigo-400 to-indigo-50"
+                      ? "text-slate-800 rounded  rounded-b-none px-10 bg-slate-200 transition-all duration-300 delay-75 ease-in-out dark:bg-slate-800 dark:text-slate-800"
                       : ""
                   )}
                 >
@@ -37,8 +37,8 @@ export const Route = createFileRoute("/blog/_layout")({
               );
             })}
           </div>
-          <div className="px-2 md:px-0 w-full mx-auto">
-            <h1 className="head-text my-8 md:my-10">{activeCategory?.name}</h1>
+          <div className="px-2 md:px-2 w-full mx-auto">
+            <h1 className="text-4xl my-8 md:mt-8">{activeCategory?.name}</h1>
             <Outlet />
           </div>
         </div>
