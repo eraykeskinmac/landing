@@ -57,7 +57,7 @@ export default function Grid2() {
             />
           </g>
         </motion.svg>
-        <div className="w-full flex justify-between items-center text-xs p-2">
+        <div className="w-full flex justify-between items-center text-[9px] lg:text-xs p-2">
           <p>01:00PM</p>
           <p>02:00PM</p>
           <p>03:00PM</p>
