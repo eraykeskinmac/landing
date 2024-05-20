@@ -28,19 +28,19 @@ export function ThemeToggler() {
           <span>
             <SunIcon className="h-[1.2rem] w-[1.2rem] mr-2" />
           </span>
-          <h1>Light</h1>
+          <p>Light</p>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <span>
             <MoonIcon className="h-[1.2rem] w-[1.2rem] mr-2" />
           </span>
-          <h1>Dark</h1>
+          <p>Dark</p>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <span>
             <LaptopIcon className="h-[1.2rem] w-[1.2rem] mr-2" />
           </span>
-          <h1>System</h1>
+          <p>System</p>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
