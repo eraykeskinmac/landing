@@ -39,9 +39,9 @@ export default function BlogCard({ blog }: { blog: BlogSchema }) {
               <a href={blog.author.twitter} target="_blank">
                 {blog.author.name}
               </a>
-              <h1 className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 {blog.author.designation}
-              </h1>
+              </p>
             </div>
           </div>
           <div className="text-sm text-muted-foreground">
