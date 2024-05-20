@@ -1,5 +1,3 @@
-"use client";
-
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/animated-beam";
