@@ -1,8 +1,36 @@
 import AnnouncementBar from "./announcement-bar";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import WaitlistForm from "@/components/waitlist-form";
 import { HoverBorderGradient } from "@/components/ui/gradient-button";
+
+const container = {
+  hidden: {
+    opacity: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const variant = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      type: "tween",
+      easeInOut
+    },
+  },
+};
 
 export default function Hero() {
   const imageRef = useRef<HTMLImageElement>(null);
@@ -33,23 +61,54 @@ export default function Hero() {
   return (
     <motion.div
       className="relative flex flex-col items-center w-full max-w-7xl mx-auto"
+      initial={{ marginBottom: 500 }}
       animate={{ marginBottom: imageHeight / 1.5 }}
     >
-      <div className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-4 z-30 mb-4">
-        <AnnouncementBar />
-        <p className="font-bold text-4xl lg:text-6xl max-w-2xl w-full text-center">
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-4 z-30 mb-4"
+      >
+        <motion.div variants={variant}>
+          <AnnouncementBar />
+        </motion.div>
+        <motion.h1
+          variants={variant}
+          className="font-bold text-4xl lg:text-6xl max-w-2xl w-full text-center"
+        >
           Your AI Agent to
           <br />
-          <span className="primary-gradient">supercharge workflow</span>
-        </p>
-        <p className="text-sm lg:text-lg text-muted-foreground lg:px-0 px-6 lg:max-w-xl text-center w-full">
+          <motion.span
+            variants={variant}
+            className="primary-gradient"
+          >
+            supercharge workflow
+          </motion.span>
+        </motion.h1>
+        <motion.p
+          variants={variant}
+          className="text-sm lg:text-lg text-muted-foreground lg:px-0 px-6 lg:max-w-lg text-center w-full"
+        >
           Our agents integrate with your existing software, automating your
           workflows and repetitive tasks for you.
-        </p>
-      </div>
-      <WaitlistForm />
-      <div className="relative w-full h-12">
-        <HoverBorderGradient 
+        </motion.p>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.75, delay: 0.45, ease: easeInOut, type: "tween" }}
+        className="w-full z-50"
+      >
+        <WaitlistForm />
+      </motion.div>
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, delay: 0.1, ease: easeInOut, type: "tween" }}
+        className="relative w-full h-12"
+      >
+        <HoverBorderGradient
           as="div"
           backgroundClassname="bg-[var(--bg-hero)]"
           containerClassName="absolute z-20 my-2 md:my-10 lg:mx-2 w-full h-auto rounded-xl lg:rounded-2xl bg-transparent dark:bg-transparent border-none"
@@ -63,7 +122,7 @@ export default function Hero() {
           src="/radialElipse.svg"
           className="absolute z-10 bottom-1/2 translate-y-[65%] opacity-80"
         />
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
