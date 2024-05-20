@@ -11,7 +11,12 @@ export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
-    <div className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-0 px-6 z-[1000]">
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.75, delay: 0.45, type: "tween" }}
+      className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-0 px-6 z-[1000]"
+    >
       <Link to="/">
         <Icons.Logo />
       </Link>
@@ -21,7 +26,8 @@ export const Navbar = () => {
           onClick={() => {
             document.getElementById("waitlist-form")?.focus();
           }}
-          containerClassName="border bg-black/10 dark:bg-white/10"
+          containerClassName="border bg-black/10 dark:bg-white/10 p-0"
+          backgroundClassname="bg-black inset-[0.5px]"
         >
           Join waitlist
         </HoverBorderGradient>
@@ -63,7 +69,7 @@ export const Navbar = () => {
         </motion.div>
       </div>
       <AnimatePresence>{showNavbar && <MobileNav onClick={() => setShowNavbar(!showNavbar)} />}</AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
