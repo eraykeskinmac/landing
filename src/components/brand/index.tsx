@@ -5,7 +5,7 @@ import { HoverBorderGradient } from "@/components/ui/gradient-button";
 export default function Brand() {
   const borderRadius = "1rem";
   return (
-    <section className="w-full aspect-[1923/815] flex justify-center items-center">
+    <section className="w-full max-w-7xl my-10 mx-auto flex justify-center items-center lg:px-0 px-5">
       <HoverBorderGradient
         className="bg-background w-full h-full p-0"
         containerClassName="rounded-2xl lg:w-[80%] w-full bg-background dark:bg-transparent border-none p-0"
@@ -19,7 +19,7 @@ export default function Brand() {
           }}
         >
           <motion.h1
-            className="text-center absolute w-full font-bold tracking-wider -bottom-1 lg:-bottom-5 text-5xl md:text-7xl lg:text-9xl uppercase text-muted-foreground -z-10 opacity-70"
+            className="text-center absolute w-full font-bold tracking-wider -bottom-3 lg:-bottom-5 text-6xl md:text-7xl lg:text-9xl uppercase text-muted-foreground -z-10 opacity-70"
             initial={{ y: 50, opacity: 0 }}
             animate={{
               y: 0,
@@ -35,7 +35,7 @@ export default function Brand() {
             LEAPFLOW
           </motion.h1>
           <Gradient />
-          <div className="flex justify-between gap-5 items-center tracking-wide text-sm text-muted-foreground">
+          <div className="flex justify-between gap-5 items-center tracking-wide text-xs lg:text-sm text-muted-foreground">
             <motion.p
               className="uppercase text-xs md:text-base"
               initial={{ x: 25, opacity: 0 }}
@@ -91,11 +91,12 @@ export default function Brand() {
 
 const Gradient = () => {
   return (
-    <motion.svg
+    <>
+     <motion.svg
       viewBox="0 0 1500 476"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full opacity-75 -z-10 rounded-2xl"
+      className="absolute bottom-0 lg:bottom-0 left-1/2 -translate-x-1/2 w-full opacity-75 -z-10 rounded-2xl mix-blend-color-dodge"
     >
       <g id="gradient">
         <g id="Ellipse 43" filter="url(#filter0_f_129_515)">
@@ -165,6 +166,22 @@ const Gradient = () => {
         </filter>
       </defs>
     </motion.svg>
+  
+    <svg width="1430" height="556" className="absolute -bottom-[450px] " viewBox="0 0 1430 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_362_538)">
+<ellipse cx="714.927" cy="277.915" rx="574.927" ry="137.915" stroke="white" stroke-width="120"/>
+</g>
+<defs>
+<filter id="filter0_f_362_538" x="0" y="0" width="1429.85" height="555.831" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_362_538"/>
+</filter>
+</defs>
+</svg>
+
+    </>
+   
   );
 };
 

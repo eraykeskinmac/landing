@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 
 export default function Grid5() {
   return (
-    <div className="col-span-2 border w-full h-full rounded-2xl bg-secondary/40 flex flex-col justify-between p-2 md:p-5 gap-6">
+    <div className="col-span-2 border w-full h-full rounded-2xl bg-secondary/40 flex flex-col justify-around p-4 md:p-5 gap-6">
       <div className="space-y-2 lg:space-y-7">
         <h1 className="text-xl md:text-4xl lg:text-5xl font-bold">
           Higher quality output and Consistency

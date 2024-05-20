@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export default function Grid3() {
   return (
-    <div className="border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-center items-center gap-3">
+    <div className="border w-full rounded-2xl text-center bg-secondary/40 p-4 md:p-5 flex flex-col justify-start lg:justify-evenly items-start lg:items-center gap-3">
       <motion.h1
-        className="lg:text-xl"
+        className="lg:text-xl text-lg font-bold"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -14,7 +14,7 @@ export default function Grid3() {
         Easy integration
       </motion.h1>
       <motion.p
-        className="text-sm text-muted-foreground"
+        className="text-lg text-muted-foreground lg:text-center text-left"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -22,7 +22,7 @@ export default function Grid3() {
       >
         Seamlessly integrate with your tools to automate like never before.
       </motion.p>
-      <div className="relative w-2/3 md:w-full aspect-square bg-secondary/30 border p-3 md:p-6 rounded-full">
+      <div className="relative w-2/3 md:w-full mx-auto aspect-square bg-secondary/30 border p-3 md:p-6 rounded-full">
         <motion.div
           className="border w-full h-full rounded-full bg-secondary/40 flex justify-center items-center"
           initial={{ scale: 0 }}

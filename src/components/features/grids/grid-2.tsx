@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Grid2() {
   return (
-    <div className="col-span-2 border w-full rounded-2xl bg-secondary/40 flex flex-col items-center text-center p-3 lg:p-5">
+    <div className="col-span-2 border w-full rounded-2xl bg-secondary/40 flex flex-col items-start lg:items-center text-left lg:text-center p-4 lg:p-5">
       <h1 className="text-xl lg:text-3xl font-bold max-w-lg">
         Automate your task so that,
       </h1>
@@ -57,7 +57,7 @@ export default function Grid2() {
             />
           </g>
         </motion.svg>
-        <div className="w-full flex justify-between items-center text-xs p-2">
+        <div className="w-full flex justify-between items-center text-[9px] lg:text-xs p-2">
           <p>01:00PM</p>
           <p>02:00PM</p>
           <p>03:00PM</p>

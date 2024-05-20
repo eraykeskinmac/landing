@@ -3,10 +3,10 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Grid1() {
   return (
-    <div className="border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center">
-      <div className="flex flex-col items-center">
+    <div className="border w-full rounded-2xl text-left lg:text-center bg-secondary/40  md:p-5 flex flex-col justify-start lg:justify-between items-start lg:items-center p-4">
+      <div className="flex flex-col items-start lg:items-center">
         <motion.h1
-          className="text-2xl lg:text-3xl font-bold"
+          className="text-2xl lg:text-3xl font-bold lg:text-center text-left"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -14,7 +14,7 @@ export default function Grid1() {
           24/7 Workflow
         </motion.h1>
         <motion.p
-          className="text-sm text-muted-foreground pt-3 max-w-[15rem] lg:max-w-lg pb-2"
+          className="text-lg text-muted-foreground pt-3  max-w-full lg:max-w-lg pb-2"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -24,9 +24,9 @@ export default function Grid1() {
           day.
         </motion.p>
       </div>
-      <div className="relative w-1/2 md:w-full aspect-square bg-secondary/30 border rounded-xl p-3">
+      <div className="relative w-1/2 md:w-full aspect-square bg-secondary/30 border rounded-xl p-3 mx-auto">
         <motion.div
-          className="border w-full h-full rounded-full radial-gradient flex justify-center items-center"
+          className="border w-full  h-full rounded-full radial-gradient flex justify-center items-center"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.5 }}

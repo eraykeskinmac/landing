@@ -42,7 +42,7 @@ export const Route = createFileRoute("/blog/_layout")({
             <Outlet />
           </div>
         </div>
-        <div className="w-full bg-background">
+        <div className="w-full bg-transparent">
           <Brand />
         </div>
       </main>
