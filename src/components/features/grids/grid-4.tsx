@@ -3,7 +3,7 @@ import { EllipsisVertical } from "lucide-react";
 
 export default function Grid4() {
   return (
-    <div className="relative col-span-2 border w-full rounded-2xl bg-secondary/40 flex flex-col justify-between p-2 lg:p-5 overflow-hidden">
+    <>
       <h1 className="text-lg lg:text-2xl">
         Start a workflow and automate it for future use.
       </h1>
@@ -79,7 +79,7 @@ export default function Grid4() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Grid2() {
   return (
-    <div className="col-span-2 border w-full rounded-2xl bg-secondary/40 flex flex-col items-center text-center p-3 lg:p-5">
+    <>
       <h1 className="text-xl lg:text-3xl font-bold max-w-lg">
         Automate your task so that,
       </h1>
@@ -65,6 +65,6 @@ export default function Grid2() {
           <p>05:00PM</p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

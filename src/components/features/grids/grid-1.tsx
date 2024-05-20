@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Grid1() {
   return (
-    <div className="border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center">
+    <>
       <div className="flex flex-col items-center">
         <motion.h1
           className="text-2xl lg:text-3xl font-bold"
@@ -34,7 +34,7 @@ export default function Grid1() {
         />
         <CountDown />
       </div>
-    </div>
+    </>
   );
 }
 
