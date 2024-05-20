@@ -9,7 +9,7 @@ export const Route = createLazyFileRoute('/')({
 
 function App() {
   return (
-    <div className="flex flex-col justify-center items-center w-full">
+    <div className="flex flex-col justify-center items-center w-full lg:px-0 px-2">
       <div className="w-full bg-[var(--bg-hero)] mb-12 lg:mb-[30vh]">
         <Hero />
       </div>
