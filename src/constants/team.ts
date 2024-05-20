@@ -3,10 +3,17 @@ import type { PersonProfile } from "@/types";
 export const team: PersonProfile[] = [
   {
     name: "Suhas Sumukh",
-    designation: "Founder & CEO",
+    designation: "Co-founder, CEO",
     image: "/team/suhas.png",
     twitter: "https://x.com/suhasasumukh",
     linkedin: "https://www.linkedin.com/in/suhasasumukh"
+  },
+  {
+    name: "Shoubhit Dash",
+    designation: "Co-founder, CTO",
+    image: "/team/nexxel.jpg",
+    twitter: "https://x.com/nexxeln",
+    linkedin: "https://www.linkedin.com/in/shoubhit-dash"
   },
   {
     name: "Anurag Sharma",
