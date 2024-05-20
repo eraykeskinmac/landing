@@ -6,7 +6,7 @@ import { Link } from "@tanstack/react-router";
 
 export default function Footer() {
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-col py-4 lg:py-16 px-2 md:px-3 lg:px-0">
+    <div className="w-full max-w-7xl mx-auto flex flex-col py-4 lg:py-16 px-2 md:px-3 lg:px-0 z-50">
       <div className="flex justify-between flex-wrap gap-5">
         <div className="space-y-8 lg:space-y-5 md:w-auto w-full flex flex-col md:items-start items-center">
           <Link to="/">

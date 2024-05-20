@@ -14,7 +14,7 @@ export const Route = createRootRoute({
         <header className="bg-[var(--bg-hero)] w-full">
           <Navbar />
         </header>
-        <div className="flex flex-col flex-1 min-h-screen w-full">
+        <div className="flex flex-col flex-1 min-h-screen w-full bg-[#110D22]">
           <Outlet />
         </div>
         <footer className="border-t">
