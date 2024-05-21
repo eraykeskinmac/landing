@@ -38,7 +38,7 @@ function AboutPage() {
           ))}
         </div>
         <h1 className="head-text mt-20">Advisors</h1>
-        <div id="team" className="w-auto max-w-4xl flex flex-wrap my-12 gap-x-5 lg:gap-x-10 gap-y-10">
+        <div id="team" className="w-auto max-w-4xl flex lg:justify-start justify-center flex-wrap my-12 gap-x-5 lg:gap-x-10 gap-y-10">
           {advisors.map((profile, index) => (
             <PersonProfile key={index} {...profile} />
           ))}
