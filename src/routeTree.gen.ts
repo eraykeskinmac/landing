@@ -24,12 +24,7 @@ const ChangelogLazyImport = createFileRoute('/changelog')()
 const AboutLazyImport = createFileRoute('/about')()
 const IndexLazyImport = createFileRoute('/')()
 const BlogLayoutIndexLazyImport = createFileRoute('/blog/_layout/')()
-const BlogLayoutBlogCategoryLazyImport = createFileRoute(
-  '/blog/_layout/$blogCategory',
-)()
-const BlogLayoutBlogCategorySlugLazyImport = createFileRoute(
-  '/blog/_layout/$blogCategory/$slug',
-)()
+const BlogLayoutSlugLazyImport = createFileRoute('/blog/_layout/$slug')()
 
 // Create/Update Routes
 
@@ -75,24 +70,12 @@ const BlogLayoutIndexLazyRoute = BlogLayoutIndexLazyImport.update({
   import('./routes/blog/_layout.index.lazy').then((d) => d.Route),
 )
 
-const BlogLayoutBlogCategoryLazyRoute = BlogLayoutBlogCategoryLazyImport.update(
-  {
-    path: '/$blogCategory',
-    getParentRoute: () => BlogLayoutRoute,
-  } as any,
-).lazy(() =>
-  import('./routes/blog/_layout.$blogCategory.lazy').then((d) => d.Route),
+const BlogLayoutSlugLazyRoute = BlogLayoutSlugLazyImport.update({
+  path: '/$slug',
+  getParentRoute: () => BlogLayoutRoute,
+} as any).lazy(() =>
+  import('./routes/blog/_layout.$slug.lazy').then((d) => d.Route),
 )
-
-const BlogLayoutBlogCategorySlugLazyRoute =
-  BlogLayoutBlogCategorySlugLazyImport.update({
-    path: '/$slug',
-    getParentRoute: () => BlogLayoutBlogCategoryLazyRoute,
-  } as any).lazy(() =>
-    import('./routes/blog/_layout.$blogCategory.$slug.lazy').then(
-      (d) => d.Route,
-    ),
-  )
 
 // Populate the FileRoutesByPath interface
 
@@ -147,11 +130,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogLayoutImport
       parentRoute: typeof BlogRoute
     }
-    '/blog/_layout/$blogCategory': {
-      id: '/blog/_layout/$blogCategory'
-      path: '/$blogCategory'
-      fullPath: '/blog/$blogCategory'
-      preLoaderRoute: typeof BlogLayoutBlogCategoryLazyImport
+    '/blog/_layout/$slug': {
+      id: '/blog/_layout/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogLayoutSlugLazyImport
       parentRoute: typeof BlogLayoutImport
     }
     '/blog/_layout/': {
@@ -160,13 +143,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogLayoutIndexLazyImport
       parentRoute: typeof BlogLayoutImport
-    }
-    '/blog/_layout/$blogCategory/$slug': {
-      id: '/blog/_layout/$blogCategory/$slug'
-      path: '/$slug'
-      fullPath: '/blog/$blogCategory/$slug'
-      preLoaderRoute: typeof BlogLayoutBlogCategorySlugLazyImport
-      parentRoute: typeof BlogLayoutBlogCategoryLazyImport
     }
   }
 }
@@ -181,10 +157,7 @@ export const routeTree = rootRoute.addChildren({
   IntegrationLazyRoute,
   BlogRoute: BlogRoute.addChildren({
     BlogLayoutRoute: BlogLayoutRoute.addChildren({
-      BlogLayoutBlogCategoryLazyRoute:
-        BlogLayoutBlogCategoryLazyRoute.addChildren({
-          BlogLayoutBlogCategorySlugLazyRoute,
-        }),
+      BlogLayoutSlugLazyRoute,
       BlogLayoutIndexLazyRoute,
     }),
   }),
