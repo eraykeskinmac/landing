@@ -45,7 +45,7 @@ function BlogPage() {
         <Button
           size="sm"
           variant="ghost"
-          className="group absolute top-0 left-[-15%] flex items-center gap-2 hover:bg-indigo-400/50 hover:text-white"
+          className="group mb-3 p-0 flex items-center gap-2 hover:bg-transparent hover:text-white"
         >
           <ArrowLeft
             size={16}
