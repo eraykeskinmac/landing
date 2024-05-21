@@ -5,7 +5,7 @@ import { HoverBorderGradient } from "@/components/ui/gradient-button";
 export default function Brand() {
   const borderRadius = "1rem";
   return (
-    <section className="w-full max-w-7xl my-10 mx-auto flex justify-center items-center lg:px-0 px-2">
+    <section className="w-full max-w-7xl mx-auto flex justify-center items-center lg:px-0 px-2">
       <HoverBorderGradient
         className="bg-background w-full h-full p-0"
         containerClassName="rounded-2xl lg:w-[80%] w-full bg-background dark:bg-transparent border-none p-0"
@@ -186,7 +186,7 @@ const Gradient = () => {
             rx="574.927"
             ry="137.915"
             stroke="white"
-            stroke-width="120"
+            strokeWidth="120"
           />
         </g>
         <defs>
@@ -197,9 +197,9 @@ const Gradient = () => {
             width="1429.85"
             height="555.831"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
