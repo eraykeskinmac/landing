@@ -2,7 +2,7 @@ import { defaultNavConfig } from "@/config/navbar.config";
 import { cn } from "@/lib/utils";
 import { useRef } from "react";
 import useScrolledEnough from "@/lib/hooks/useScrolledEnough";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 
 export default function Mininav() {
   const pathName = window.location.pathname;
@@ -40,9 +40,13 @@ export default function Mininav() {
 }
 
 const JoinWaitlistButton = () => {
+  const navigator = useNavigate();
+
   return (
     <button
       onClick={() => {
+        navigator({ to: "/" });
+        window.scrollTo({ top: 0, behavior: "smooth" });
         document.getElementById("waitlist-form")?.focus();
       }}
       className="hidden bg-background no-underline group cursor-pointer relative shadow-2xl shadow-indigo-900 rounded-full p-px text-xs font-semibold leading-6 md:inline-block"

@@ -3,6 +3,7 @@ import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site.config";
 import { Link } from "@tanstack/react-router";
+import { CTAButton } from "../brand/cta-button";
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
             <Icons.Logo />
           </Link>
           <div className="flex items-center gap-3">
-            <Button
+            {/* <Button
               size="sm"
               onClick={() => {
                 document.getElementById("waitlist-form")?.focus();
@@ -21,7 +22,8 @@ export default function Footer() {
               className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-800/60 shine shine-hover"
             >
               Join waitlist
-            </Button>
+            </Button> */}
+            <CTAButton className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-800/60 shine shine-hover" />
             <Button variant="outline" size="sm">
               Learn more
             </Button>

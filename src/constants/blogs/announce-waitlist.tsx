@@ -5,7 +5,7 @@ export const announceWaitlist: BlogSchema = {
   description: "Our waitlist is live now",
   author: {
     name: "Suhas Sumukh",
-    designation: "Founder & CEO",
+    designation: "Co-founder & CEO",
     image: "/team/suhas.png",
     twitter: "https://x.com/suhasasumukh",
     linkedin: "https://www.linkedin.com/in/suhasasumukh"

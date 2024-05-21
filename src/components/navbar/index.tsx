@@ -5,9 +5,10 @@ import MobileNav from "./mobile-navbar";
 import { defaultNavConfig } from "@/config/navbar.config";
 import { cn } from "@/lib/utils";
 import { HoverBorderGradient } from "@/components/ui/gradient-button";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 
 export const Navbar = () => {
+  const navigator = useNavigate();
   const [showNavbar, setShowNavbar] = useState(false);
 
   return (
@@ -24,6 +25,8 @@ export const Navbar = () => {
       <div className="flex justify-center items-center gap-x-4">
         <HoverBorderGradient
           onClick={() => {
+            navigator({ to: "/" });
+            window.scrollTo({ top: 0, behavior: "smooth" });
             document.getElementById("waitlist-form")?.focus();
           }}
           containerClassName="border bg-black/10 dark:bg-white/10 p-0"

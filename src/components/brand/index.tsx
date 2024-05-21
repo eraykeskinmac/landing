@@ -1,9 +1,10 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { HoverBorderGradient } from "@/components/ui/gradient-button";
+import { CTAButton } from "./cta-button";
 
 export default function Brand() {
   const borderRadius = "1rem";
+
   return (
     <section className="w-full max-w-7xl mx-auto flex justify-center items-center lg:px-0 px-2">
       <HoverBorderGradient
@@ -74,15 +75,7 @@ export default function Brand() {
             <h1>Increase your efficiency with ease,</h1>
             <h1>and transform your workflow.</h1>
           </div>
-          <Button
-            size="sm"
-            onClick={() => {
-              document.getElementById("waitlist-form")?.focus();
-            }}
-            className="shine shine-anim"
-          >
-            Join waitlist
-          </Button>
+          <CTAButton className="shine shine-anim" />
         </div>
       </HoverBorderGradient>
     </section>
