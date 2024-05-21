@@ -1,3 +1,5 @@
+import { categories } from "@/config/blogCategories.config";
+import { blogs } from "@/constants/blogs";
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -16,3 +18,18 @@ export const isActiveCategory = (categoryPath: string, currentPath: string, rout
 
   return false;
 };
+
+export const getActiveCategory = () => {
+  const blog = "/blog"
+  const currentPath = window.location.pathname;
+  console.log(currentPath)
+  const category = categories.find((category) => {
+    return isActiveCategory(category.slug, currentPath, blog);
+  });
+  return category
+}
+
+export const getBlog = (slug: string) => {
+  const blog = blogs.find((blog) => blog.slug === slug);
+  return blog
+}
