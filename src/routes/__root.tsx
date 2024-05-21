@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import RootProvider from "@/components/root-provider";
 import { Toaster } from "@/components/ui/sonner";
 import Mininav from "@/components/navbar/mininav";
+import { ScrollRestoration } from '@tanstack/react-router'
 
 export const Route = createRootRoute({
   component: () => (
@@ -15,6 +16,7 @@ export const Route = createRootRoute({
           <Navbar />
         </header>
         <div className="flex flex-col flex-1 min-h-screen w-full">
+          <ScrollRestoration />
           <Outlet />
         </div>
         <footer className="border-t">
