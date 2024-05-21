@@ -105,7 +105,7 @@ export default function Hero() {
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, delay: 0.1, ease: easeInOut, type: "tween" }}
+        transition={{ duration: 0.75, delay: 0.1, type: "spring", stiffness: 100 }}
         className="relative w-full h-12"
       >
         <HoverBorderGradient
