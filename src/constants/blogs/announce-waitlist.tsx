@@ -2,6 +2,7 @@ import type { BlogSchema } from "@/types";
 
 export const announceWaitlist: BlogSchema = {
   title: "Announcing our waitlist",
+  description: "Our waitlist is live now",
   author: {
     name: "Suhas Sumukh",
     designation: "Founder & CEO",
