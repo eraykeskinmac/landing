@@ -3,6 +3,7 @@ import PersonProfile from "@/components/person-profile";
 import { team } from "@/constants/team";
 import { advisors } from "@/constants/advisor";
 import Brand from "@/components/brand";
+import { BackgroundBeams } from "@/components/background-beams";
 
 export const Route = createLazyFileRoute("/about")({
   component: AboutPage,
@@ -12,6 +13,7 @@ function AboutPage() {
   return (
     <main className="w-full min-h-screen bg-[var(--bg-hero)] px-1 lg:px-0">
       <div className="w-full max-w-5xl mx-auto">
+        <BackgroundBeams className="translate-y-20" />
         <h1 className="head-text mt-12 md:mt-16 lg:mt-24">Our mission</h1>
         <div className="space-y-8 mt-5">
           <p className="text-muted-foreground text-lg max-w-xl">
