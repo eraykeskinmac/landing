@@ -111,7 +111,10 @@ function BlogPage() {
       <p className="text-muted-foreground text-lg my-16">
         We believe that automation is the key to unlocking new levels of
         productivity and efficiency. By joining our waitlist, you’ll be at the
-        forefront of this exciting journey. We look forward to welcoming you to
+        forefront of this exciting journey. 
+        <br />
+        <br />
+        We look forward to welcoming you to
         our community of early adopters and can’t wait to share what we’ve been
         working on.
       </p>
