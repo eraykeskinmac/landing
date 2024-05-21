@@ -42,7 +42,7 @@ function AboutPage() {
           ))}
         </div>
       </div>
-      <div className="bg-background w-full py-12">
+      <div className="bg-background w-full py-20">
         <Brand />
       </div>
     </main>

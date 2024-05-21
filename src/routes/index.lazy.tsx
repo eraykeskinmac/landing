@@ -14,7 +14,7 @@ function App() {
         <Hero />
       </div>
       <FeaturesSection />
-      <div className='px-1 lg:px-0 w-full'>
+      <div className='px-1 lg:px-0 w-full my-16 md:my-24 lg:my-32'>
         <Brand />
       </div>
     </div>
