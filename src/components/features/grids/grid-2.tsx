@@ -4,7 +4,7 @@ export default function Grid2() {
   return (
     <>
       <h1 className="text-xl lg:text-3xl font-bold max-w-lg">
-        Automate your task so that,
+        We automate your tasks so that,
       </h1>
       <h1 className="text-xl lg:text-3xl font-bold max-w-lg">
         you can scale growth
