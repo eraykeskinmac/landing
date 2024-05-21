@@ -36,6 +36,7 @@ export type BlogCategory = {
 export type BlogSchema = {
   title: string;
   author: PersonProfile;
+  description: string;
   slug: string;
   date: Date;
   category: BlogCategory;
