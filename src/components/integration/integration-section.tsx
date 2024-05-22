@@ -2,7 +2,7 @@ import Integration from "./integration";
 
 export default function IntegrationSection() {
   return (
-    <section className="relative mt-12 mb-16 md:mt-24 md:mb-28 w-full">
+    <section id="integration" className="relative mt-12 mb-16 md:mt-24 md:mb-28 w-full">
       <svg
         viewBox="0 0 1920 1252"
         fill="none"

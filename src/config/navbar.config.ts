@@ -7,7 +7,7 @@ export const defaultNavConfig: DefaultNavConfig = [
   },
   {
     title: "Integration",
-    href: "/integration"
+    href: "/#integration"
   },
   {
     title: "Blog",

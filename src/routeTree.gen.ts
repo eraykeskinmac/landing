@@ -18,7 +18,6 @@ import { Route as BlogLayoutImport } from './routes/blog/_layout'
 // Create Virtual Routes
 
 const BlogImport = createFileRoute('/blog')()
-const IntegrationLazyImport = createFileRoute('/integration')()
 const DocsLazyImport = createFileRoute('/docs')()
 const ChangelogLazyImport = createFileRoute('/changelog')()
 const AboutLazyImport = createFileRoute('/about')()
@@ -32,11 +31,6 @@ const BlogRoute = BlogImport.update({
   path: '/blog',
   getParentRoute: () => rootRoute,
 } as any)
-
-const IntegrationLazyRoute = IntegrationLazyImport.update({
-  path: '/integration',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/integration.lazy').then((d) => d.Route))
 
 const DocsLazyRoute = DocsLazyImport.update({
   path: '/docs',
@@ -109,13 +103,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsLazyImport
       parentRoute: typeof rootRoute
     }
-    '/integration': {
-      id: '/integration'
-      path: '/integration'
-      fullPath: '/integration'
-      preLoaderRoute: typeof IntegrationLazyImport
-      parentRoute: typeof rootRoute
-    }
     '/blog': {
       id: '/blog'
       path: '/blog'
@@ -154,7 +141,6 @@ export const routeTree = rootRoute.addChildren({
   AboutLazyRoute,
   ChangelogLazyRoute,
   DocsLazyRoute,
-  IntegrationLazyRoute,
   BlogRoute: BlogRoute.addChildren({
     BlogLayoutRoute: BlogLayoutRoute.addChildren({
       BlogLayoutSlugLazyRoute,
