@@ -40,11 +40,6 @@ export default function Grid5() {
         ensuring excellence in every task, just like having a dependable
         teammate by your side.
       </p>
-      {/* <div>
-        <Button className="rounded-full" size="lg">
-          <Link to="/about">Explore more</Link>
-        </Button>
-      </div> */}
       <div
         className="relative flex w-full max-w-[400px] mx-auto items-center justify-center overflow-hidden rounded-lg pt-3"
         ref={containerRef}
@@ -63,7 +58,7 @@ export default function Grid5() {
               <Icons.notion className="h-6 w-6" />
             </Circle>
             <Circle ref={div4Ref} className="h-16 w-16">
-              <Icons.openai className="h-6 w-6" />
+              <Icons.PlusIcon className="h-6 w-6" />
             </Circle>
             <Circle ref={div6Ref}>
               <Icons.Linear className="h-6 w-6" />
