@@ -3,6 +3,7 @@ import Hero from "@/components/hero";
 import FeaturesSection from "@/components/features";
 import Brand from "@/components/brand";
 import IntegrationSection from '@/components/integration/integration-section';
+import IntegrationGrid from '@/components/integration/integration-grid';
 
 export const Route = createLazyFileRoute('/')({
   component: App
@@ -16,6 +17,7 @@ function App() {
       </div>
       <FeaturesSection />
       <IntegrationSection />
+      <IntegrationGrid />
       <div className='px-1 lg:px-0 w-full my-16 md:my-24 lg:my-32'>
         <Brand />
       </div>
