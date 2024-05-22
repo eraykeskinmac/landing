@@ -10,7 +10,7 @@ export default function FeaturesSection() {
       <MagicCard className="col-span-2 border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center">
         <Grid2 />
       </MagicCard>
-      <MagicCard className="border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center">
+      <MagicCard className="border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center overflow-hidden">
         <Grid3 />
       </MagicCard>
       <MagicCard className="col-span-2 border w-full rounded-2xl bg-secondary/40 p-2 md:p-5 flex flex-col justify-between overflow-hidden">
