@@ -25,9 +25,9 @@ export default function IntegrationSection() {
           >
             <stop offset="0.624" stopColor="#0F0F0F" />
             <stop 
-              offset="1" 
-              stopColor="#5661F6"
-              stopOpacity="0.5"
+              offset="1"
+              stopColor="#666666"
+              stopOpacity="0."
             />
           </linearGradient>
         </defs>
