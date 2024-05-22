@@ -1,5 +1,5 @@
 import { Grid1, Grid2, Grid3, Grid4, Grid5 } from "./grids";
-import { MagicCard, MagicContainer } from "../magic-card";
+import { MagicCard, MagicContainer } from "@/components/magic-card";
 
 export default function FeaturesSection() {
   return (
