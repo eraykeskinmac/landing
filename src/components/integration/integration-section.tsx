@@ -1,14 +1,13 @@
 import Integration from "./integration";
-import { motion } from "framer-motion";
 
 export default function IntegrationSection() {
   return (
     <section className="relative mt-12 mb-16 md:mt-24 md:mb-28 w-full">
-      <motion.svg
+      <svg
         viewBox="0 0 1920 1252"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-1/2 -translate-x-1/2 translate-y-16 md:-translate-y-[10%] lg:-translate-y-[48%] -z-50 w-[130%] h-auto overflow-hidden"
+        className="absolute left-1/2 -translate-x-1/2 translate-y-16 md:-translate-y-[10%] lg:-translate-y-[33%] -z-50 w-[100%] h-auto overflow-hidden"
       >
         <path
           d="M2124 0C2124 332.051 2000.1 650.502 1779.56 885.298C1559.01 1120.09 1259.89 1252 948 1252C636.106 1252 336.985 1120.09 116.443 885.298C-104.1 650.502 -228 332.051 -228 0.000244141L553.556 0.00012207C553.556 111.374 595.114 218.186 669.086 296.939C743.059 375.692 843.387 419.935 948 419.935C1052.61 419.935 1152.94 375.692 1226.91 296.939C1300.89 218.186 1342.44 111.374 1342.44 0H2124Z"
@@ -16,7 +15,7 @@ export default function IntegrationSection() {
           fillOpacity="0.2"
         />
         <defs>
-          <motion.linearGradient
+          <linearGradient
             id="paint0_linear_446_968"
             x1="948"
             y1="-1252"
@@ -25,17 +24,14 @@ export default function IntegrationSection() {
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0.624" stopColor="#0F0F0F" />
-            <motion.stop 
+            <stop 
               offset="1" 
               stopColor="#5661F6"
               stopOpacity="0.5"
-              initial={{ stopColor: "#5661F6", stopOpacity: 0.5 }}
-              animate={{ stopColor: "#4752ed", stopOpacity: 0.5 }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
             />
-          </motion.linearGradient>
+          </linearGradient>
         </defs>
-      </motion.svg>
+      </svg>
 
       <div className="w-full flex justify-center items-center">
         <Integration />
