@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/icons";
+import useMediaQuery from "@/lib/hooks/useMediaQuery";
 
 export default function Grid3() {
+  const isMobile = useMediaQuery("(max-width: 770px)");
+
   return (
     <>
       <motion.h1
@@ -34,7 +37,7 @@ export default function Grid3() {
           className="h-[40px] w-[40px] border-none bg-transparent"
           duration={20}
           delay={20}
-          radius={80}
+          radius={isMobile ? 60 : 80}
         >
           <Icons.Trello width={35} height={35} />
         </OrbitingCircles>
@@ -42,7 +45,7 @@ export default function Grid3() {
           className="h-[40px] w-[40px] border-none bg-transparent"
           duration={20}
           delay={10}
-          radius={80}
+          radius={isMobile ? 60 : 80}
         >
           <Icons.Linear width={35} height={35} />
         </OrbitingCircles>
@@ -50,7 +53,7 @@ export default function Grid3() {
         <OrbitingCircles
           className="border-none bg-transparent"
           reverse
-          radius={130}
+          radius={isMobile ? 80 : 130}
           duration={20}
         >
           <Icons.Slack width={40} height={40} />
@@ -58,7 +61,7 @@ export default function Grid3() {
         <OrbitingCircles
           className="border-none bg-transparent"
           reverse
-          radius={130}
+          radius={isMobile ? 80 : 130}
           duration={20}
           delay={20}
         >
