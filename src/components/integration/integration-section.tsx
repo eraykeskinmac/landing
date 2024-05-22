@@ -8,7 +8,7 @@ export default function IntegrationSection() {
         viewBox="0 0 1920 1252"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-1/2 -translate-x-1/2 -translate-y-[48%] -z-50 w-[130%] h-auto overflow-hidden"
+        className="absolute left-1/2 -translate-x-1/2 translate-y-16 md:-translate-y-[10%] lg:-translate-y-[48%] -z-50 w-[130%] h-auto overflow-hidden"
       >
         <path
           d="M2124 0C2124 332.051 2000.1 650.502 1779.56 885.298C1559.01 1120.09 1259.89 1252 948 1252C636.106 1252 336.985 1120.09 116.443 885.298C-104.1 650.502 -228 332.051 -228 0.000244141L553.556 0.00012207C553.556 111.374 595.114 218.186 669.086 296.939C743.059 375.692 843.387 419.935 948 419.935C1052.61 419.935 1152.94 375.692 1226.91 296.939C1300.89 218.186 1342.44 111.374 1342.44 0H2124Z"
@@ -41,7 +41,7 @@ export default function IntegrationSection() {
         <Integration />
       </div>
 
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center text-center">
         <p className="primary-gradient font-semibold tracking-widest uppercase">
           Integrations
         </p>
@@ -49,7 +49,7 @@ export default function IntegrationSection() {
           <p className="text-4xl pt-3 font-medium">
             Connect your tool and automate it in seconds
           </p>
-          <p className="text-muted-foreground max-w-2xl text-center font-medium ">
+          <p className="text-muted-foreground max-w-xl font-medium">
             Our AI Agents that work alongside you, seamlessly integrating with
             your existing software to enhance productivity and workflow
           </p>
