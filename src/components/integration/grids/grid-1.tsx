@@ -1,19 +1,49 @@
-import { easeIn, motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import {
+  useMotionTemplate,
+  motion,
+  easeIn,
+  useMotionValue,
+} from "framer-motion";
+import { cn, generateRandomString } from "@/lib/utils";
 
 export default function Grid1() {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const [randomString, setRandomString] = useState("");
+
+  useEffect(() => {
+    const str = generateRandomString(1500);
+    setRandomString(str);
+  }, []);
+
+  function onMouseMove({ currentTarget, clientX, clientY }: any) {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+
+    const str = generateRandomString(1500);
+    setRandomString(str);
+  }
+
   return (
-    <div className="w-full h-full flex flex-col justify-end">
+    <div
+      onMouseMove={onMouseMove}
+      className="relative w-full p-2 md:p-5 h-full flex flex-col justify-end group/card"
+    >
       <motion.svg
         width="100px"
         height="150px"
         viewBox="0 0 138 195"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="mx-auto h-full"
+        className="mx-auto h-full z-20"
       >
         <motion.path
           initial={{ opacity: 1, y: -21 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: -18 }}
+          whileHover={{ y: 0 }}
           transition={{ duration: 0.25, delay: 0.5, ease: easeIn }}
           d="M120.543 94.5252H102.543V56.5252C102.543 45.9644 94.1049 18.5 68 18.5C43.1195 18.5 36.0429 47 36.0429 56.5V77C36.0429 82.2 33.7096 83.8334 32.5429 84C30.1477 84 28.9551 84.0609 22.5429 84C16.1477 83.9392 17.0428 80.4392 17.0428 77C17.3762 64.3333 17.0429 56.5252 17.0429 56.5252C17.0429 39.5 22.9566 0 69 0C105 0 120.543 28.5 120.543 56.5252V94.5252Z"
           fill="url(#paint0_linear_519_597)"
@@ -50,7 +80,7 @@ export default function Grid1() {
         </defs>
       </motion.svg>
 
-      <div>
+      <div className="z-50">
         <h1 className="text-muted-foreground mb-2">Security</h1>
         <p className="text-lg md:text-xl font-semibold">
           Secure integration between our
@@ -59,6 +89,42 @@ export default function Grid1() {
           agents and your software.
         </p>
       </div>
+      <div
+        className={cn(
+          "absolute top-0 left-0 p-0.5 bg-transparent aspect-square flex items-center justify-center w-full h-full"
+        )}
+      >
+        <div className="rounded-[inherit] w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full">
+          <SecurityPattern
+            mouseX={mouseX}
+            mouseY={mouseY}
+            randomString={randomString}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function SecurityPattern({ mouseX, mouseY, randomString }: any) {
+  const maskImage = useMotionTemplate`radial-gradient(250px at ${mouseX}px ${mouseY}px, white, transparent)`;
+  const style = { maskImage, WebkitMaskImage: maskImage };
+
+  return (
+    <div className="pointer-events-none">
+      <div className="absolute inset-0 [mask-image:linear-gradient(white,transparent)] group-hover/card:opacity-50"></div>
+      <motion.div
+        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-600/60 to-indigo-700/50 opacity-0 group-hover/card:opacity-50 backdrop-blur-xl transition duration-500"
+        style={style}
+      />
+      <motion.div
+        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
+        style={style}
+      >
+        <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-[#888eed] font-mono font-bold transition duration-500">
+          {randomString}
+        </p>
+      </motion.div>
     </div>
   );
 }
