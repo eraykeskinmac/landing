@@ -12,7 +12,7 @@ export default function AnnouncementBar() {
       <p>Announcing our waitlist</p>
       <ArrowRight
         size={14}
-        className="-translate-x-1 group-hover:translate-x-0 duration-100 transition-transform transform-gpu ease-in-out"
+        className="-translate-x-1 group-hover:-translate-x-[2px] duration-200 delay-75 transition-transform transform-gpu ease-in-out"
       />
     </a>
   );
