@@ -10,7 +10,7 @@ export default function IntegrationGrid() {
       <MagicCard className="col-span-2 md:col-span-1 lg:col-span-2 border w-full rounded-2xl bg-secondary/40 p-px overflow-hidden max-h-[27rem]">
         <Grid2 />
       </MagicCard>
-      <MagicCard className="col-span-2 lg:col-span-3 border w-full rounded-2xl bg-secondary/40 p-px overflow-hidden h-[27rem]">
+      <MagicCard className="col-span-2 lg:col-span-3 border w-full rounded-2xl bg-secondary/40 p-px overflow-hidden max-h-[27rem]">
         <Grid3 />
       </MagicCard>
       <MagicCard className="col-span-2 lg:col-span-4 border w-full rounded-2xl bg-secondary/40 p-2 md:p-5 flex flex-col justify-between overflow-hidden h-[27rem]">
