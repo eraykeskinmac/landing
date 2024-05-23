@@ -48,8 +48,8 @@ export default function Grid1() {
           fill="url(#paint0_linear_519_597)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M69 194.5C107.108 194.5 138 163.608 138 125.5C138 87.3924 107.108 56.5 69 56.5C30.8923 56.5 0 87.3924 0 125.5C0 163.608 30.8923 194.5 69 194.5ZM84 116.5C84 121.407 81.6433 125.764 78 128.501V141.5C78 146.471 73.9706 150.5 69 150.5C64.0294 150.5 60 146.471 60 141.5V128.501C56.3567 125.764 54 121.407 54 116.5C54 108.216 60.7157 101.5 69 101.5C77.2843 101.5 84 108.216 84 116.5Z"
           fill="url(#paint1_linear_519_597)"
         />
@@ -62,8 +62,8 @@ export default function Grid1() {
             y2="101.552"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#5661F6" />
-            <stop offset="1" stop-color="#323990" />
+            <stop stopColor="#5661F6" />
+            <stop offset="1" stopColor="#323990" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_519_597"
@@ -73,8 +73,8 @@ export default function Grid1() {
             y2="194.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#5661F6" />
-            <stop offset="1" stop-color="#323990" />
+            <stop stopColor="#5661F6" />
+            <stop offset="1" stopColor="#323990" />
           </linearGradient>
         </defs>
       </motion.svg>

@@ -49,8 +49,8 @@ export default function Grid4() {
               y2="248.166"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#5661F6" />
-              <stop offset="0.975" stop-color="#323990" />
+              <stop stopColor="#5661F6" />
+              <stop offset="0.975" stopColor="#323990" />
             </linearGradient>
           </defs>
           <filter id="noise" x="0" y="0">
@@ -126,9 +126,9 @@ export default function Grid4() {
               y2="294"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#747CE5" stopOpacity="0" />
-              <stop stop-color="#747CE5" />
-              <stop offset="1" stop-color="#292E74" />
+              <stop stopColor="#747CE5" stopOpacity="0" />
+              <stop stopColor="#747CE5" />
+              <stop offset="1" stopColor="#292E74" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_556_570"
@@ -138,9 +138,9 @@ export default function Grid4() {
               y2="318"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#747CE5" stopOpacity="0" />
-              <stop stop-color="#747CE5" />
-              <stop offset="1" stop-color="#292E74" />
+              <stop stopColor="#747CE5" stopOpacity="0" />
+              <stop stopColor="#747CE5" />
+              <stop offset="1" stopColor="#292E74" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_556_570"
@@ -150,9 +150,9 @@ export default function Grid4() {
               y2="339"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#747CE5" stopOpacity="0" />
-              <stop stop-color="#747CE5" />
-              <stop offset="1" stop-color="#292E74" />
+              <stop stopColor="#747CE5" stopOpacity="0" />
+              <stop stopColor="#747CE5" />
+              <stop offset="1" stopColor="#292E74" />
             </linearGradient>
             <linearGradient
               id="paint3_linear_556_570"
@@ -162,9 +162,9 @@ export default function Grid4() {
               y2="364"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#747CE5" stopOpacity="0" />
-              <stop stop-color="#747CE5" />
-              <stop offset="1" stop-color="#292E74" />
+              <stop stopColor="#747CE5" stopOpacity="0" />
+              <stop stopColor="#747CE5" />
+              <stop offset="1" stopColor="#292E74" />
             </linearGradient>
           </defs>
         </motion.svg>
