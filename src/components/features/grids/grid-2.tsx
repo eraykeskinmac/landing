@@ -31,7 +31,6 @@ export default function Grid2() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="group-hover/grid2:stroke-indigo-600 duration-300 delay-75 transition-all ease-in-out"
               initial={{ pathLength: 0 }}
               whileInView={{
                 pathLength: 1,
