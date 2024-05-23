@@ -44,8 +44,8 @@ export default function IntegrationSection() {
           <p className="text-4xl pt-3 font-medium">
             Connect your tool and automate it in seconds
           </p>
-          <p className="text-muted-foreground max-w-xl font-medium">
-            Our AI Agents that work alongside you, seamlessly integrating with
+          <p className="text-muted-foreground max-w-xl">
+            Our AI Agents that work alongside you, seamlessly integrates with
             your existing software to enhance productivity and workflow
           </p>
         </div>
