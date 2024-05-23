@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 export default function Grid2() {
   return (
     <>
-      <h1 className="text-xl lg:text-3xl font-bold max-w-lg">
+      <h1 className="text-xl lg:text-3xl font-bold max-w-lg group/grid2">
         We automate your tasks so that,
       </h1>
       <h1 className="text-xl lg:text-3xl font-bold max-w-lg">
         you can scale growth
       </h1>
-      <p className="text-muted-foreground text-lg max-w-lg my-5">
+      <p className="text-muted-foreground max-w-lg my-5 group-hover/grid2:-translate-y-1 group-hover/grid2:opacity-85 duration-300 delay-75 transition-all ease-in-out">
         Scale with ease as you focus on what matters most. Let our intelligent
         agents handle all the work for you.
       </p>
       <div
         id="graph"
-        className="w-full h-full bg-secondary/30 border rounded-xl p-2 flex flex-col justify-between items-center"
+        className="w-full h-full bg-secondary/30 border rounded-xl p-2 flex flex-col justify-between items-center backdrop-blur-xl group-hover/grid2:scale-[1.025] group-hover/grid2:-translate-y-1 duration-300 delay-75 transition-all ease-in-out"
       >
         <motion.svg
           viewBox="0 0 606 199"
@@ -31,6 +31,7 @@ export default function Grid2() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="group-hover/grid2:stroke-indigo-600 duration-300 delay-75 transition-all ease-in-out"
               initial={{ pathLength: 0 }}
               whileInView={{
                 pathLength: 1,

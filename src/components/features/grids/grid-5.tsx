@@ -47,29 +47,29 @@ export default function Grid5() {
         <div className="flex h-full w-full flex-col items-stretch justify-between gap-10">
           <div className="flex flex-row items-center justify-between">
             <Circle ref={div1Ref}>
-              <Icons.Discord className="h-6 w-6" />
+              <Icons.Discord className="h-6 w-6 group-hover/grid5:scale-125 duration-300 delay-100 transition-transform transform-gpu ease-in-out" />
             </Circle>
             <Circle ref={div5Ref}>
-              <Icons.Trello className="h-6 w-6" />
+              <Icons.Trello className="h-6 w-6 group-hover/grid5:scale-125 duration-300 delay-100 transition-transform transform-gpu ease-in-out" />
             </Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
             <Circle ref={div2Ref}>
-              <Icons.notion className="h-6 w-6" />
+              <Icons.notion className="h-6 w-6 group-hover/grid5:scale-125 duration-300 delay-100 transition-transform transform-gpu ease-in-out" />
             </Circle>
             <Circle ref={div4Ref} className="h-16 w-16">
-              <Icons.PlusIcon className="h-6 w-6" />
+              <Icons.PlusIcon className="h-6 w-6 cursor-pointer group-hover/grid5:scale-125 duration-300 delay-100 transition-transform transform-gpu ease-in-out" />
             </Circle>
             <Circle ref={div6Ref}>
-              <Icons.Linear className="h-6 w-6" />
+              <Icons.Linear className="group-hover/grid5:scale-125 duration-300 delay-100 transition-transform transform-gpu ease-in-out" />
             </Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
             <Circle ref={div3Ref}>
-              <Icons.Slack className="h-6 w-6" />
+              <Icons.Slack className="h-6 w-6 group-hover/grid5:scale-125 duration-300 delay-100 transition-transform transform-gpu ease-in-out" />
             </Circle>
             <Circle ref={div7Ref}>
-              <Icons.LinkedIn className="h-6 w-6" />
+              <Icons.LinkedIn className="h-6 w-6 group-hover/grid5:scale-125 duration-300 delay-100 transition-transform transform-gpu ease-in-out" />
             </Circle>
           </div>
         </div>

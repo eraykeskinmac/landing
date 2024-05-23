@@ -17,7 +17,7 @@ export default function Grid3() {
         Easy integration
       </motion.h1>
       <motion.p
-        className="text-sm text-muted-foreground pt-3 max-w-[15rem] lg:max-w-lg pb-2"
+        className="text-muted-foreground pt-3 max-w-[15rem] lg:max-w-lg pb-2"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -35,16 +35,16 @@ export default function Grid3() {
         />
         <OrbitingCircles
           className="h-[40px] w-[40px] border-none bg-transparent"
-          duration={20}
-          delay={20}
+          duration={10}
+          delay={10}
           radius={isMobile ? 60 : 80}
         >
           <Icons.Trello width={35} height={35} />
         </OrbitingCircles>
         <OrbitingCircles
           className="h-[40px] w-[40px] border-none bg-transparent"
-          duration={20}
-          delay={10}
+          duration={10}
+          delay={5}
           radius={isMobile ? 60 : 80}
         >
           <Icons.Linear width={35} height={35} />
