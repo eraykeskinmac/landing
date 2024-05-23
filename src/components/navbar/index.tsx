@@ -16,7 +16,7 @@ export const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.75, delay: 0.45, type: "tween" }}
-      className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-0 px-6 z-[1000]"
+      className="flex relative justify-between max-w-7xl mx-auto py-4 items-center lg:px-2 px-6 z-[1000]"
     >
       <Link to="/">
         <Icons.Logo />

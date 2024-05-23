@@ -6,7 +6,7 @@ export default function Brand() {
   const borderRadius = "1rem";
 
   return (
-    <section className="w-full max-w-7xl mx-auto flex justify-center items-center lg:px-0 px-2">
+    <section className="w-full max-w-7xl mx-auto flex justify-center items-center px-2">
       <HoverBorderGradient
         className="bg-background w-full h-full p-0"
         containerClassName="rounded-2xl lg:w-[80%] w-full bg-background dark:bg-transparent border-none p-0"

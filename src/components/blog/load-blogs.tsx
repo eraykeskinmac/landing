@@ -14,7 +14,7 @@ export default function LoadBlogs({ category = "all" }: LoadBlogsProps) {
         <BlogCard key={blog.slug} blog={blog} />
       ))}
       {categorizedBlogs.length === 0 && 
-        <p>No blogs found</p>
+        <p>No blogs yet</p>
       }
     </div>
   );
