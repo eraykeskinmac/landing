@@ -2,7 +2,10 @@ import Integration from "./integration";
 
 export default function IntegrationSection() {
   return (
-    <section id="integration" className="relative mt-12 mb-16 md:mt-24 md:mb-28 w-full">
+    <section
+      id="integration"
+      className="relative mt-12 mb-16 md:mt-24 md:mb-28 w-full"
+    >
       <svg
         viewBox="0 0 1920 1252"
         fill="none"
@@ -24,11 +27,7 @@ export default function IntegrationSection() {
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0.624" stopColor="#0F0F0F" />
-            <stop 
-              offset="1"
-              stopColor="#666666"
-              stopOpacity="0."
-            />
+            <stop offset="1" stopColor="#666666" stopOpacity="" />
           </linearGradient>
         </defs>
       </svg>
