@@ -22,7 +22,6 @@ export const isActiveCategory = (categoryPath: string, currentPath: string, rout
 export const getActiveCategory = () => {
   const blog = "/blog"
   const currentPath = window.location.pathname;
-  console.log(currentPath)
   const category = categories.find((category) => {
     return isActiveCategory(category.slug, currentPath, blog);
   });
