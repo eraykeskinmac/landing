@@ -105,7 +105,7 @@ export default function Grid4() {
           />
           <motion.path
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.15, scale: 2.2 }}
+            whileInView={{ opacity: 0.15, scale: 3 }}
             transition={{ duration: 0.25, delay: 1.45, type: "spring", damping: "50" }}
             d="M340 181.5C340 268.485 269.485 339 182.5 339C95.5152 339 25 268.485 25 181.5C25 94.5152 95.5152 24 182.5 24C269.485 24 340 94.5152 340 181.5ZM27.8497 181.5C27.8497 266.911 97.089 336.15 182.5 336.15C267.911 336.15 337.15 266.911 337.15 181.5C337.15 96.089 267.911 26.8497 182.5 26.8497C97.089 26.8497 27.8497 96.089 27.8497 181.5Z"
             fill="url(#paint2_linear_556_570)"
