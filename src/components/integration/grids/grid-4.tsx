@@ -6,7 +6,7 @@ export default function Grid4() {
       <div className="relative h-full">
         <motion.img
           src="/lightning.gif"
-          className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2"
+          className="absolute left-1/3 top-1/3 -translate-x-1/2 -translate-y-1/2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: [0, 1, 0] }}
           transition={{ duration: 0.2, delay: 1.30 }}
