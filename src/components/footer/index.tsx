@@ -16,9 +16,9 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <CTAButton className="bg-[var(--theme-color)] text-slate-200 hover:bg-indigo-800/60 shine shine-hover" />
             <Button variant="outline" size="sm">
-              <Link to="/integration">
+              <a href="/#integration">
                 Learn more
-              </Link>
+              </a>
             </Button>
           </div>
           <div className="flex items-center gap-3">
@@ -36,12 +36,6 @@ export default function Footer() {
         <div className="flex gap-12 justify-center md:w-auto w-full">
           <div className="space-y-3 text-muted-foreground flex flex-col">
             <h1 className="text-primary">Products</h1>
-            <Link
-              to="/docs"
-              className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
-            >
-              Docs
-            </Link>
             <Link
               to="/changelog"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
@@ -63,12 +57,12 @@ export default function Footer() {
             >
               Blogs
             </Link>
-            <Link
-              to="/integration"
+            <a
+              href="/#integration"
               className="text-sm hover:text-secondary-foreground duration-75 transition-colors"
             >
               Integration
-            </Link>
+            </a>
           </div>
         </div>
       </div>
