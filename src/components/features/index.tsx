@@ -7,7 +7,7 @@ export default function FeaturesSection() {
       <MagicCard className="border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center">
         <Grid1 />
       </MagicCard>
-      <MagicCard className="col-span-2 border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center">
+      <MagicCard className="col-span-2 border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center group/grid2">
         <Grid2 />
       </MagicCard>
       <MagicCard className="border w-full rounded-2xl text-center bg-secondary/40 p-2 md:p-5 flex flex-col justify-between items-center overflow-hidden">
@@ -16,7 +16,7 @@ export default function FeaturesSection() {
       <MagicCard className="col-span-2 border w-full rounded-2xl bg-secondary/40 p-2 md:p-5 flex flex-col justify-between overflow-hidden">
         <Grid4 />
       </MagicCard>
-      <MagicCard className="col-span-2 border w-full rounded-2xl bg-secondary/40 p-2 md:p-5 flex flex-col">
+      <MagicCard className="col-span-2 border w-full rounded-2xl bg-secondary/40 p-2 md:p-5 flex flex-col group/grid5">
         <Grid5 />
       </MagicCard>
     </MagicContainer>
