@@ -5,8 +5,10 @@ import RootProvider from "@/components/root-provider";
 import { Toaster } from "@/components/ui/sonner";
 import Mininav from "@/components/navbar/mininav";
 import { ScrollRestoration } from '@tanstack/react-router'
+import NotFoundPage from "@/components/not-found";
 
 export const Route = createRootRoute({
+  notFoundComponent: NotFoundPage,
   component: () => (
     <>
       <RootProvider>

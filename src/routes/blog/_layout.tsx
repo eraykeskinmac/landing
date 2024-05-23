@@ -1,7 +1,9 @@
 import { createFileRoute, Outlet } from "@tanstack/react-router";
 import Brand from "@/components/brand";
+import NotFoundPage from "@/components/not-found";
 
 export const Route = createFileRoute("/blog/_layout")({
+  notFoundComponent: NotFoundPage,
   component: () => {
     return (
       <main id="blog" className="w-full min-h-screen bg-[var(--bg-hero)]">
