@@ -5,7 +5,7 @@ import MobileNav from "./mobile-navbar";
 import { defaultNavConfig } from "@/config/navbar.config";
 import { cn } from "@/lib/utils";
 import { HoverBorderGradient } from "@/components/ui/gradient-button";
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate, useLocation } from "@tanstack/react-router";
 
 export const Navbar = () => {
   const navigator = useNavigate();
@@ -77,18 +77,21 @@ export const Navbar = () => {
 };
 
 const Links = () => {
-  const pathName = window.location.pathname;
+  const location = useLocation();
+  const pathName = location.pathname;
 
   return (
     <div className="lg:flex hidden text-sm gap-x-5 justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       {defaultNavConfig.map((item) => {
+        const isActive = pathName.split("/")[1] === item.href.split("/")[1];
+
         return (
           <Link
             to={item.href}
             key={item.href}
             className={cn(
               "hover:text-primary duration-75 transition-colors",
-              pathName !== item.href && "text-muted-foreground"
+              !isActive && "text-muted-foreground"
             )}
             aria-disabled={item.disable}
           >
