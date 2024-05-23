@@ -16,7 +16,7 @@ export default function IntegrationGrid() {
       <MagicCard className="col-span-2 lg:col-span-4 border w-full rounded-2xl bg-secondary/40 p-0 flex flex-col justify-between overflow-hidden max-h-[27rem]">
         <Grid4 />
       </MagicCard>
-      <MagicCard className="col-span-2 lg:col-span-3 border w-full rounded-2xl bg-secondary/40 p-2 md:p-5 flex flex-col max-h-[27rem]">
+      <MagicCard className="col-span-2 lg:col-span-3 border w-full rounded-2xl bg-secondary/40 p-2 md:p-5 flex flex-col min-h-[20rem] max-h-[27rem]">
         <Grid5 />
       </MagicCard>
     </MagicContainer>

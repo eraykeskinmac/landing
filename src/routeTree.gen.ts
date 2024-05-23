@@ -20,7 +20,6 @@ import { Route as BlogLayoutSlugImport } from './routes/blog/_layout.$slug'
 // Create Virtual Routes
 
 const BlogImport = createFileRoute('/blog')()
-const DocsLazyImport = createFileRoute('/docs')()
 const ChangelogLazyImport = createFileRoute('/changelog')()
 const AboutLazyImport = createFileRoute('/about')()
 const IndexLazyImport = createFileRoute('/')()
@@ -31,11 +30,6 @@ const BlogRoute = BlogImport.update({
   path: '/blog',
   getParentRoute: () => rootRoute,
 } as any)
-
-const DocsLazyRoute = DocsLazyImport.update({
-  path: '/docs',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/docs.lazy').then((d) => d.Route))
 
 const ChangelogLazyRoute = ChangelogLazyImport.update({
   path: '/changelog',
@@ -92,13 +86,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChangelogLazyImport
       parentRoute: typeof rootRoute
     }
-    '/docs': {
-      id: '/docs'
-      path: '/docs'
-      fullPath: '/docs'
-      preLoaderRoute: typeof DocsLazyImport
-      parentRoute: typeof rootRoute
-    }
     '/blog': {
       id: '/blog'
       path: '/blog'
@@ -136,7 +123,6 @@ export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
   AboutLazyRoute,
   ChangelogLazyRoute,
-  DocsLazyRoute,
   BlogRoute: BlogRoute.addChildren({
     BlogLayoutRoute: BlogLayoutRoute.addChildren({
       BlogLayoutSlugRoute,
