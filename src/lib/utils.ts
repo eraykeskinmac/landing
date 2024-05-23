@@ -33,3 +33,13 @@ export const getBlog = (slug: string) => {
   const blog = blogs.find((blog) => blog.slug === slug);
   return blog
 }
+
+const characters =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+export const generateRandomString = (length: number) => {
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+};
