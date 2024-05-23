@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 export default function Grid1() {
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center group/grid1">
         <motion.h1
           className="text-2xl lg:text-3xl font-bold lg:text-center text-left"
           initial={{ opacity: 0, y: 50 }}
@@ -14,7 +14,7 @@ export default function Grid1() {
           24/7 Workflow
         </motion.h1>
         <motion.p
-          className="text-lg text-muted-foreground pt-3  max-w-full lg:max-w-lg pb-2"
+          className="text-muted-foreground pt-3 max-w-full lg:max-w-lg pb-2"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -24,7 +24,7 @@ export default function Grid1() {
           day.
         </motion.p>
       </div>
-      <div className="relative w-1/2 md:w-full aspect-square bg-secondary/30 border rounded-xl p-3 mx-auto">
+      <div className="relative w-1/2 md:w-full aspect-square bg-secondary/30 border rounded-xl p-3 mx-auto hover:scale-105 duration-300 delay-75 transition-transform transform-gpu ease-in-out">
         <motion.div
           className="border w-full  h-full rounded-full radial-gradient flex justify-center items-center"
           initial={{ scale: 0 }}
