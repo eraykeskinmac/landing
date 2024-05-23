@@ -9,7 +9,7 @@ export default function Grid4() {
           className="absolute left-1/3 top-1/3 -translate-x-1/2 -translate-y-1/2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: [0, 1, 0] }}
-          transition={{ duration: 0.2, delay: 1.30 }}
+          transition={{ duration: 0.5, delay: 1.30 }}
           viewport={{ once: true }}
         />
         <motion.svg
@@ -21,7 +21,7 @@ export default function Grid4() {
           className="mx-auto h-full"
           whileInView={{
             x: [0, 4, -4, 5, -5, 0],
-            transition: { duration: 0.1, delay: 1.25 },
+            transition: { duration: 0.4, delay: 1.25 },
           }}
           viewport={{ once: true }}
         >
@@ -71,7 +71,7 @@ export default function Grid4() {
         </motion.svg>
       </div>
       <div className="z-20">
-        <h1 className="mb-2 text-[#757EEE]">
+        <h1 className="mb-2 text-[#757EEE] font-medium">
           Built for efficiency and productivity
         </h1>
         <p className="text-lg md:text-xl font-semibold">
