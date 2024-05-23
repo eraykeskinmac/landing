@@ -1,4 +1,4 @@
-import { createLazyFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { getActiveCategory, getBlog } from "@/lib/utils";
 import BlogCategoryBar from "@/components/blog/blog-category";
 import LoadBlogs from "@/components/blog/load-blogs";
@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
-export const Route = createLazyFileRoute("/blog/_layout/$slug")({
+export const Route = createFileRoute("/blog/_layout/$slug")({
   component: BlogPage,
 });
 

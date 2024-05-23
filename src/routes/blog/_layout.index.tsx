@@ -1,8 +1,8 @@
-import { createLazyFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import BlogCategoryBar from "@/components/blog/blog-category";
 import LoadBlogs from "@/components/blog/load-blogs";
 
-export const Route = createLazyFileRoute("/blog/_layout/")({
+export const Route = createFileRoute("/blog/_layout/")({
   component: BlogPage,
 });
 

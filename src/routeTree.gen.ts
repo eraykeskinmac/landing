@@ -14,6 +14,8 @@ import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as BlogLayoutImport } from './routes/blog/_layout'
+import { Route as BlogLayoutIndexImport } from './routes/blog/_layout.index'
+import { Route as BlogLayoutSlugImport } from './routes/blog/_layout.$slug'
 
 // Create Virtual Routes
 
@@ -22,8 +24,6 @@ const DocsLazyImport = createFileRoute('/docs')()
 const ChangelogLazyImport = createFileRoute('/changelog')()
 const AboutLazyImport = createFileRoute('/about')()
 const IndexLazyImport = createFileRoute('/')()
-const BlogLayoutIndexLazyImport = createFileRoute('/blog/_layout/')()
-const BlogLayoutSlugLazyImport = createFileRoute('/blog/_layout/$slug')()
 
 // Create/Update Routes
 
@@ -57,19 +57,15 @@ const BlogLayoutRoute = BlogLayoutImport.update({
   getParentRoute: () => BlogRoute,
 } as any)
 
-const BlogLayoutIndexLazyRoute = BlogLayoutIndexLazyImport.update({
+const BlogLayoutIndexRoute = BlogLayoutIndexImport.update({
   path: '/',
   getParentRoute: () => BlogLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/blog/_layout.index.lazy').then((d) => d.Route),
-)
+} as any)
 
-const BlogLayoutSlugLazyRoute = BlogLayoutSlugLazyImport.update({
+const BlogLayoutSlugRoute = BlogLayoutSlugImport.update({
   path: '/$slug',
   getParentRoute: () => BlogLayoutRoute,
-} as any).lazy(() =>
-  import('./routes/blog/_layout.$slug.lazy').then((d) => d.Route),
-)
+} as any)
 
 // Populate the FileRoutesByPath interface
 
@@ -121,14 +117,14 @@ declare module '@tanstack/react-router' {
       id: '/blog/_layout/$slug'
       path: '/$slug'
       fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogLayoutSlugLazyImport
+      preLoaderRoute: typeof BlogLayoutSlugImport
       parentRoute: typeof BlogLayoutImport
     }
     '/blog/_layout/': {
       id: '/blog/_layout/'
       path: '/'
       fullPath: '/blog/'
-      preLoaderRoute: typeof BlogLayoutIndexLazyImport
+      preLoaderRoute: typeof BlogLayoutIndexImport
       parentRoute: typeof BlogLayoutImport
     }
   }
@@ -143,8 +139,8 @@ export const routeTree = rootRoute.addChildren({
   DocsLazyRoute,
   BlogRoute: BlogRoute.addChildren({
     BlogLayoutRoute: BlogLayoutRoute.addChildren({
-      BlogLayoutSlugLazyRoute,
-      BlogLayoutIndexLazyRoute,
+      BlogLayoutSlugRoute,
+      BlogLayoutIndexRoute,
     }),
   }),
 })
