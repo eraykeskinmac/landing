@@ -32,7 +32,7 @@ export default function Grid5() {
 
   return (
     <>
-      <h1 className="text-lg lg:text-2xl">
+      <h1 className="text-2xl lg:text-3xl font-bold text-center">
         Higher quality output and Consistency
       </h1>
       <p className="text-lg text-muted-foreground pt-2">

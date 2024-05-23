@@ -4,7 +4,7 @@ import { EllipsisVertical } from "lucide-react";
 export default function Grid4() {
   return (
     <>
-      <h1 className="text-lg lg:text-2xl">
+      <h1 className="text-2xl lg:text-3xl font-bold text-center">
         Start a workflow and automate it for future use.
       </h1>
       <p className="text-lg text-muted-foreground pt-2">
