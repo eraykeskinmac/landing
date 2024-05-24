@@ -1,18 +1,20 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+import { AnimatePresence, motion } from 'framer-motion';
+
+import { cn } from '@/lib/utils';
 
 export function HeroInput({
   placeholders,
   onChange,
   onSubmit,
-  type = "text",
-  id = "hero-input",
+  type = 'text',
+  id = 'hero-input',
 }: {
   placeholders: string[];
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  type?: "text" | "email" | "password" | "number" | "tel" | "url" | "search";
+  type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search';
   id?: string;
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
@@ -31,14 +33,14 @@ export function HeroInput({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<any[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const [animating, setAnimating] = useState(false);
 
   const draw = useCallback(() => {
     if (!inputRef.current) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d", { willReadFrequently: true });
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
     if (!ctx) return;
 
     canvas.width = 800;
@@ -46,9 +48,9 @@ export function HeroInput({
     ctx.clearRect(0, 0, 800, 800);
     const computedStyles = getComputedStyle(inputRef.current);
 
-    const fontSize = parseFloat(computedStyles.getPropertyValue("font-size"));
+    const fontSize = parseFloat(computedStyles.getPropertyValue('font-size'));
     ctx.font = `${fontSize * 2}px ${computedStyles.fontFamily}`;
-    ctx.fillStyle = "#FFF";
+    ctx.fillStyle = '#FFF';
     ctx.fillText(value, 16, 40);
 
     const imageData = ctx.getImageData(0, 0, 800, 800);
@@ -110,7 +112,7 @@ export function HeroInput({
           }
         }
         newDataRef.current = newArr;
-        const ctx = canvasRef.current?.getContext("2d");
+        const ctx = canvasRef.current?.getContext('2d');
         if (ctx) {
           ctx.clearRect(pos, 0, 800, 800);
           newDataRef.current.forEach((t) => {
@@ -127,7 +129,7 @@ export function HeroInput({
         if (newDataRef.current.length > 0) {
           animateFrame(pos - 8);
         } else {
-          setValue("");
+          setValue('');
           setAnimating(false);
         }
       });
@@ -136,7 +138,7 @@ export function HeroInput({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && !animating) {
+    if (e.key === 'Enter' && !animating) {
       vanishAndSubmit();
     }
   };
@@ -145,11 +147,11 @@ export function HeroInput({
     setAnimating(true);
     draw();
 
-    const value = inputRef.current?.value || "";
+    const value = inputRef.current?.value || '';
     if (value && inputRef.current) {
       const maxX = newDataRef.current.reduce(
         (prev, current) => (current.x > prev ? current.x : prev),
-        0
+        0,
       );
       animate(maxX);
     }
@@ -163,15 +165,15 @@ export function HeroInput({
   return (
     <form
       className={cn(
-        "w-full relative max-w-xl mx-auto0 h-12 md:h-14 bg-background/60 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200",
-        value && "bg-background/70"
+        'w-full relative max-w-xl mx-auto mb-6 sm:mb-0 h-12 md:h-14 bg-background/60 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200',
+        value && 'bg-background/70',
       )}
       onSubmit={handleSubmit}
     >
       <canvas
         className={cn(
-          "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter pr-20",
-          !animating ? "opacity-0" : "opacity-100"
+          'absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter pr-20',
+          !animating ? 'opacity-0' : 'opacity-100',
         )}
         ref={canvasRef}
       />
@@ -187,8 +189,8 @@ export function HeroInput({
         value={value}
         type={type}
         className={cn(
-          "w-full relative text-sm sm:text-base z-50 border-none bg-transparent h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
-          animating && "text-transparent dark:text-transparent"
+          'w-full relative text-sm sm:text-base z-50 border-none bg-transparent h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20',
+          animating && 'text-transparent dark:text-transparent',
         )}
         id={id}
         autoComplete="off"
@@ -213,14 +215,14 @@ export function HeroInput({
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{
-              stroke: "#7C7C7C",
+              stroke: '#7C7C7C',
             }}
             animate={{
-              stroke: value ? "#757EEE" : "#7C7C7C",
+              stroke: value ? '#757EEE' : '#7C7C7C',
             }}
             transition={{
               duration: 0.3,
-              ease: "linear",
+              ease: 'linear',
             }}
           />
           <motion.path
@@ -230,14 +232,14 @@ export function HeroInput({
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{
-              stroke: "#7C7C7C",
+              stroke: '#7C7C7C',
             }}
             animate={{
-              stroke: value ? "#757EEE" : "#7C7C7C",
+              stroke: value ? '#757EEE' : '#7C7C7C',
             }}
             transition={{
               duration: 0.3,
-              ease: "linear",
+              ease: 'linear',
             }}
           />
         </motion.svg>
@@ -262,7 +264,7 @@ export function HeroInput({
               }}
               transition={{
                 duration: 0.3,
-                ease: "linear",
+                ease: 'linear',
               }}
               className="text-sm sm:text-base font-normal text-muted-foreground/50 pl-4 sm:pl-12 text-left w-[calc(100%-2rem)] truncate"
             >

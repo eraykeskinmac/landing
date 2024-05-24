@@ -1,8 +1,11 @@
-import AnnouncementBar from "./announcement-bar";
-import { easeInOut, motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
-import WaitlistForm from "@/components/waitlist-form";
-import { HoverBorderGradient } from "@/components/ui/gradient-button";
+import { useEffect, useRef, useState } from 'react';
+
+import { easeInOut, motion } from 'framer-motion';
+
+import { HoverBorderGradient } from '@/components/ui/gradient-button';
+import WaitlistForm from '@/components/waitlist-form';
+
+import AnnouncementBar from './announcement-bar';
 
 const container = {
   hidden: {
@@ -26,8 +29,8 @@ const variant = {
     y: 0,
     transition: {
       duration: 0.75,
-      type: "tween",
-      easeInOut
+      type: 'tween',
+      easeInOut,
     },
   },
 };
@@ -46,29 +49,29 @@ export default function Hero() {
     };
     handleResize();
 
-    window.addEventListener("resize", handleResize);
-    currentImageRef?.addEventListener("load", handleResize);
+    window.addEventListener('resize', handleResize);
+    currentImageRef?.addEventListener('load', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
 
       if (currentImageRef) {
-        currentImageRef.removeEventListener("load", handleResize);
+        currentImageRef.removeEventListener('load', handleResize);
       }
     };
   }, [imageRef]);
 
   return (
     <motion.div
-      className="relative flex flex-col items-center w-full max-w-7xl mx-auto"
+      className="relative flex flex-col items-center w-full max-w-xs sm:max-w-3xl lg:max-w-6xl 2xl:max-w-7xl mx-auto"
       initial={{ marginBottom: 500 }}
       animate={{ marginBottom: imageHeight / 1.5 }}
     >
-      <motion.div 
+      <motion.div
         variants={container}
         initial="hidden"
         animate="visible"
-        className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-4 z-30 mb-4"
+        className="py-8 flex flex-col justify-center items-center gap-y-2 lg:gap-y-4 z-30"
       >
         <motion.div variants={variant}>
           <AnnouncementBar />
@@ -79,10 +82,7 @@ export default function Hero() {
         >
           Your AI Agent to
           <br />
-          <motion.span
-            variants={variant}
-            className="primary-gradient"
-          >
+          <motion.span variants={variant} className="primary-gradient">
             supercharge workflow
           </motion.span>
         </motion.h1>
@@ -97,15 +97,25 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.75, delay: 0.45, ease: easeInOut, type: "tween" }}
+        transition={{
+          duration: 0.75,
+          delay: 0.45,
+          ease: easeInOut,
+          type: 'tween',
+        }}
         className="w-full z-50"
       >
         <WaitlistForm />
       </motion.div>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.75, delay: 0.1, type: "spring", stiffness: 100 }}
+        transition={{
+          duration: 0.75,
+          delay: 0.1,
+          type: 'spring',
+          stiffness: 100,
+        }}
         className="relative w-full h-12"
       >
         <HoverBorderGradient

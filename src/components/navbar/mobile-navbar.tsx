@@ -1,13 +1,14 @@
-import { motion } from "framer-motion";
-import { Icons } from "@/components/icons";
-import { Separator } from "@/components/ui/separator";
-import { defaultNavConfig } from "@/config/navbar.config";
-import { cn } from "@/lib/utils";
-import { Link } from "@tanstack/react-router";
+import { Link } from '@tanstack/react-router';
+import { motion } from 'framer-motion';
+
+import { Icons } from '@/components/icons';
+import { Separator } from '@/components/ui/separator';
+import { defaultNavConfig } from '@/config/navbar.config';
+import { cn } from '@/lib/utils';
 
 const variants = {
   visible: { x: 0, transition: { stiffness: 200 } },
-  hidden: { x: "-100%", transition: { stiffness: 200 } },
+  hidden: { x: '-100%', transition: { stiffness: 200 } },
 };
 
 export default function MobileNav({ onClick }: { onClick: () => void }) {
@@ -32,8 +33,8 @@ export default function MobileNav({ onClick }: { onClick: () => void }) {
               to={item.href}
               key={item.href}
               className={cn(
-                "hover:text-primary duration-75 transition-colors",
-                pathName !== item.href && "text-muted-foreground"
+                'hover:text-primary duration-75 transition-colors',
+                pathName !== item.href && 'text-muted-foreground',
               )}
               aria-disabled={item.disable}
               onClick={onClick}

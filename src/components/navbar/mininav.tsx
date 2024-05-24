@@ -1,8 +1,10 @@
-import { defaultNavConfig } from "@/config/navbar.config";
-import { cn } from "@/lib/utils";
-import { useRef } from "react";
-import useScrolledEnough from "@/lib/hooks/useScrolledEnough";
-import { Link, useNavigate } from "@tanstack/react-router";
+import { useRef } from 'react';
+
+import { Link, useNavigate } from '@tanstack/react-router';
+
+import { defaultNavConfig } from '@/config/navbar.config';
+import useScrolledEnough from '@/lib/hooks/useScrolledEnough';
+import { cn } from '@/lib/utils';
 
 export default function Mininav() {
   const pathName = window.location.pathname;
@@ -13,10 +15,10 @@ export default function Mininav() {
     <div
       ref={ref}
       className={cn(
-        "inline-flex border border-indigo-800/40 rounded-full px-4 py-2 bg-background nav-gradient fixed top-2 left-1/2 -translate-x-1/2 z-[1000] transition-all transform-gpu duration-300 ease-in-out text-sm",
+        'inline-flex border border-indigo-800/40 rounded-full px-4 py-2 bg-background nav-gradient fixed top-2 left-1/2 -translate-x-1/2 z-[1000] transition-all transform-gpu duration-300 ease-in-out text-sm',
         scrolledEnough
-          ? "opacity-100 transalte-y-0 scale-100 gap-x-5 justify-center items-center"
-          : "opacity-0 -translate-y-24 scale-0"
+          ? 'opacity-100 transalte-y-0 scale-100 gap-x-5 justify-center items-center'
+          : 'opacity-0 -translate-y-24 scale-0',
       )}
     >
       {defaultNavConfig.map((item) => {
@@ -25,8 +27,8 @@ export default function Mininav() {
             to={item.href}
             key={item.href}
             className={cn(
-              "hover:text-primary duration-75 transition-colors",
-              pathName !== item.href && "text-muted-foreground"
+              'hover:text-primary text-sm sm:text-base duration-75 transition-colors',
+              pathName !== item.href && 'text-muted-foreground',
             )}
             aria-disabled={item.disable}
           >
@@ -45,22 +47,22 @@ const JoinWaitlistButton = () => {
   return (
     <button
       onClick={() => {
-        navigator({ to: "/" });
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        document.getElementById("waitlist-form")?.focus();
+        navigator({ to: '/' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.getElementById('waitlist-form')?.focus();
       }}
       className="hidden bg-background no-underline group cursor-pointer relative shadow-2xl shadow-indigo-900 rounded-full p-px text-xs font-semibold leading-6 md:inline-block"
     >
       <span className="absolute inset-0 overflow-hidden rounded-full">
         <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(86,97,246,0.6)_0%,rgba(86,97,246,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </span>
-      <div className="relative flex space-x-2 items-center z-10 rounded-full bg-background py-0.5 px-1 lg:px-4 ring-1 ring-blue-200/10 ">
-        <span>Join waitlist</span>
+      <div className="relative flex space-x-2 items-center z-10 rounded-full bg-background py-1 px-3 sm:px-4  ring-1 ring-blue-200/10 whitespace-nowrap ">
+        <div className="text-base">Join waitlist</div>
         <svg
           fill="none"
-          height="16"
+          height="24"
           viewBox="0 0 24 24"
-          width="16"
+          width="24"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
