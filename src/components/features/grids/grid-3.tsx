@@ -27,7 +27,7 @@ export default function Grid3() {
       </motion.p>
       <div className="relative w-2/3 md:w-full aspect-square bg-secondary/30 border p-12 rounded-full flex items-center justify-center">
         <motion.div
-          className="border-2 w-full h-full rounded-full bg-secondary/40 flex justify-center items-center"
+          className="border-2 w-full aspect-square rounded-full bg-secondary/40 flex justify-center items-center"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.5 }}

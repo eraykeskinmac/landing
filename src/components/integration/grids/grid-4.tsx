@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 
 export default function Grid4() {
+  // check if the browser is safari or not
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
   return (
     <div className="relative w-full h-full flex flex-col justify-end p-2 md:p-5">
       <div className="relative h-full">
@@ -25,7 +28,7 @@ export default function Grid4() {
           viewport={{ once: true }}
         >
           <motion.path
-            initial={{ opacity: 0, x: 0 }}
+            initial={{ opacity: isSafari ? 1 : 0, x: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.25, delay: 1.25 }}
             viewport={{ once: true }}
@@ -33,7 +36,7 @@ export default function Grid4() {
             fill="url(#paint0_linear_551_575)"
           />
           <motion.path
-            initial={{ pathLength: 0 }}
+            initial={{ pathLength: isSafari ? 1 : 0 }}
             whileInView={{ pathLength: 1 }}
             transition={{ duration: 1, delay: 0.25 }}
             d="M115.506 16.5784V107.255H161.547C179.937 107.255 171.623 127.41 167.605 132.698C144.587 162.985 96.1313 225.977 84.0085 241.736L84.0044 241.742C71.2196 258.362 59.7724 242.953 59.7724 233.261V142.391H11.3084C-4.19999 142.391 0.944172 126.64 6.46216 118.159C29.4823 85.4458 80.3692 22.4424 92.4855 7.90364C104.065 -5.99112 115.506 3.25049 115.506 16.5784Z"
