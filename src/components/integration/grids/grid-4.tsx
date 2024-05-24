@@ -10,7 +10,6 @@ export default function Grid4() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: [0, 1, 0] }}
           transition={{ duration: 0.5, delay: 1.30 }}
-          viewport={{ once: true }}
         />
         <motion.svg
           width="174"
